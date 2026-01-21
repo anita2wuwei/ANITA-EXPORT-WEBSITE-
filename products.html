@@ -3,132 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | WW Export - Precision Engineering Standards</title>
+  <title>Products | WWELEC - Engineering Standards</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 针对产品页的特定增强样式 */
-    .product-section { padding: 80px 0; border-bottom: 1px solid #eee; }
-    .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
-    .product-info h2 { color: var(--anthracite-grey); font-size: 2.5rem; margin-bottom: 20px; }
-    .tech-specs { background: var(--light-grey); padding: 25px; border-radius: 4px; margin: 25px 0; }
-    .tech-specs h5 { color: var(--hermes-orange); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-    .tech-specs ul { list-style: none; }
-    .tech-specs li { padding: 8px 0; border-bottom: 1px solid #ddd; font-size: 0.95rem; display: flex; justify-content: space-between; }
-    .tech-specs li span { font-weight: 600; color: var(--anthracite-grey); }
-    
-    .comparison-box { margin-top: 30px; border: 1px dashed var(--hermes-orange); padding: 20px; border-radius: 4px; }
-    .comparison-box h6 { font-weight: 700; margin-bottom: 10px; color: var(--hermes-orange); }
-    
-    .product-image img { width: 100%; border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-
-    @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
+    /* 页面专用布局补充 */
+    .product-box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: center; }
+    .product-img { background: var(--light-bg); height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 4px; border: 1px dashed #ddd; }
+    .spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .spec-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+    .spec-label { font-weight: bold; color: var(--anthracite-grey); width: 45%; text-transform: uppercase; font-size: 12px; }
+    @media (max-width: 768px) { .product-box { grid-template-columns: 1fr; } }
   </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">WW <span>EXPORT</span></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="container">
+    <a href="index.html" class="logo">WW <span>ELEC</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section class="product-section">
-  <div class="section-container">
-    <div class="product-grid">
-      <div class="product-image">
-        <img src="assets/images/products/ess-system.jpg" alt="Energy Storage Systems">
-      </div>
-      <div class="product-info">
-        <h2>Energy Storage Systems (ESS)</h2>
-        <p>Built for resilience. Our ESS solutions leverage automotive-grade lithium-ion technology and multi-layered BMS protection, ensuring reliable power for residential and light industrial applications.</p>
-        
-        <div class="tech-specs">
-          <h5>Core Engineering Specifications</h5>
-          <ul>
-            <li>Cell Chemistry <span>Tier-1 LiFePO4 (Automotive Grade)</span></li>
-            <li>Cycle Life <span>> 6000 Cycles @ 80% DOD</span></li>
-            <li>BMS Architecture <span>Redundant Protection + Thermal Mgmt</span></li>
-            <li>Certification <span>CE / UN38.3 / MSDS (Full System)</span></li>
-          </ul>
-        </div>
+<section class="sub-hero">
+  <div class="container">
+    <h1>[OUR PRODUCT PORTFOLIO]</h1>
+    <p>[Manufacturing excellence across Energy, Mobility, and Home Technology.]</p>
+  </div>
+</section>
 
-        <div class="comparison-box">
-          <h6>The WW Difference:</h6>
-          <p>Unlike low-cost alternatives, our BMS is fully integrated into the certification scope, and we use only traceable, grade-A cells to prevent thermal runaway and capacity fraud.</p>
-        </div>
-        <a href="contact.html" class="btn-primary" style="margin-top: 20px;">Request Technical Data Sheet</a>
-      </div>
+<section class="section container">
+  <div class="product-box">
+    <div class="product-img">
+      <img src="[assets/images/product-1.jpg]" alt="Product Image" style="max-width:80%; display:block; margin-bottom:10px;">
+      <p style="color: var(--hermes-orange); font-size: 12px;">[REPLACE WITH PRODUCT IMAGE PATH]</p>
+    </div>
+    <div class="product-info">
+      <h2 style="color: var(--anthracite-grey); margin-bottom:15px;">[ENERGY STORAGE SYSTEMS]</h2>
+      <p style="color: var(--text-muted);">[Automotive-grade reliability for residential and industrial backup battery solutions.]</p>
+      
+      <table class="spec-table">
+        <tr><td class="spec-label">[CELL TECHNOLOGY]</td><td>[LiFePO4 Tier-1 Cells]</td></tr>
+        <tr><td class="spec-label">[CYCLE LIFE]</td><td>[>6000 @ 80% DOD]</td></tr>
+        <tr><td class="spec-label">[CERTIFICATION]</td><td>[CE / UN38.3 / MSDS]</td></tr>
+      </table>
+      
+      <a href="contact.html" class="btn btn-orange" style="margin-top: 25px;">[GET TECHNICAL SPECS]</a>
+    </div>
+  </div>
+
+  <div class="product-box" style="direction: rtl;">
+    <div class="product-img" style="direction: ltr;">
+      <img src="[assets/images/product-2.jpg]" alt="Product Image" style="max-width:80%; display:block; margin-bottom:10px;">
+      <p style="color: var(--hermes-orange); font-size: 12px;">[REPLACE WITH PRODUCT IMAGE PATH]</p>
+    </div>
+    <div class="product-info" style="direction: ltr;">
+      <h2 style="color: var(--anthracite-grey); margin-bottom:15px;">[SMART E-MOBILITY]</h2>
+      <p style="color: var(--text-muted);">[High-performance urban mobility with integrated IoT and safety protocols.]</p>
+      
+      <table class="spec-table">
+        <tr><td class="spec-label">[FRAME MATERIAL]</td><td>[Aerospace Aluminum Alloy]</td></tr>
+        <tr><td class="spec-label">[MOTOR POWER]</td><td>[350W - 1000W Options]</td></tr>
+        <tr><td class="spec-label">[SMART FEATURES]</td><td>[App Integration / GPS]</td></tr>
+      </table>
+      
+      <a href="contact.html" class="btn btn-orange" style="margin-top: 25px;">[DOWNLOAD CATALOG]</a>
     </div>
   </div>
 </section>
 
-<section class="product-section" style="background-color: var(--white);">
-  <div class="section-container">
-    <div class="product-grid" style="direction: rtl;"> <div class="product-image" style="direction: ltr;">
-        <img src="assets/images/products/e-mobility.jpg" alt="Smart E-Mobility">
-      </div>
-      <div class="product-info" style="direction: ltr;">
-        <h2>Smart E-Mobility Solutions</h2>
-        <p>Designed through the lens of 16 years of Ninebot-tier auditing experience. We focus on structural integrity, high-efficiency motor control, and intelligent battery management.</p>
-        
-        <div class="tech-specs">
-          <h5>Structural & Electronic Integrity</h5>
-          <ul>
-            <li>Frame Material <span>High-Strength Aerospace Aluminum</span></li>
-            <li>Chipset Strategy <span>Industrial-Grade Controller ICs</span></li>
-            <li>IP Rating <span>IPX5 (System-wide)</span></li>
-            <li>Safety Protocol <span>24/7 Smart Battery Monitoring</span></li>
-          </ul>
-        </div>
-
-        <div class="comparison-box">
-          <h6>Audit Insight:</h6>
-          <p>We solve the "component substitution" problem common in manufacturing by implementing semiconductor-grade lifecycle management for all critical controller chipsets.</p>
-        </div>
-        <a href="contact.html" class="btn-primary" style="margin-top: 20px;">Download Sourcing Checklist</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="product-section">
-  <div class="section-container">
-    <div class="product-grid">
-      <div class="product-image">
-        <img src="assets/images/products/cleaning.jpg" alt="Cleaning Appliances">
-      </div>
-      <div class="product-info">
-        <h2>Professional Cleaning Appliances</h2>
-        <p>High-efficiency filtration meets industrial durability. Our OEM/ODM vacuum and floor care solutions are built for high-demand global markets.</p>
-        
-        <div class="tech-specs">
-          <h5>Performance Parameters</h5>
-          <ul>
-            <li>Suction Power <span>20kPa - 30kPa (Real Test)</span></li>
-            <li>Filtration <span>H13 HEPA (99.97% Efficiency)</span></li>
-            <li>Motor Lifecycle <span>Tested for >1000 Operating Hours</span></li>
-          </ul>
-        </div>
-        <a href="contact.html" class="btn-primary" style="margin-top: 20px;">Inquire for OEM/ODM</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <h3>Ready for a Technical Deep-Dive?</h3>
-  <p>Our experts are ready to review your product specifications and compliance requirements.</p>
-  <a class="btn-primary-alt" href="contact.html">Connect with an Engineer</a>
-</section>
-
-<footer>
-  <p>© 2026 WW Export | Professional Supply Chain Solutions.</p>
-</footer>
-
+<footer><p>© 2026 WWELEC | Professional Sourcing & Quality Intelligence</p></footer>
 </body>
 </html>
