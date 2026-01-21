@@ -1,4 +1,8 @@
-/* RESET & GLOBAL */
+/* ==========================================================================
+   WW EXPORT - PROFESSIONAL STYLESHEET (Hermès Orange & Anthracite Grey)
+   ========================================================================== */
+
+/* 1. RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -6,106 +10,114 @@
 }
 
 :root {
-  --primary-orange: #F37021; /* 爱马仕橙 */
-  --bg-anthracite: #2F343A;  /* 炭灰色 */
-  --bg-light: #F4F4F4;       /* 浅灰色 */
-  --text-main: #333333;
-  --text-white: #FFFFFF;
+  --hermes-orange: #F37021;    /* 主色：爱马仕橙 */
+  --anthracite-grey: #2F343A;  /* 背景：炭灰色 */
+  --light-grey: #F4F4F4;       /* 浅底色 */
+  --text-dark: #333333;        /* 主文字 */
+  --text-muted: #888888;       /* 辅助文字 */
+  --white: #FFFFFF;
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
   line-height: 1.6;
-  background-color: var(--bg-light);
+  background-color: var(--white);
 }
 
-/* HEADER - 保持专业与简洁 */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* 2. HEADER & NAVIGATION */
 header {
-  background: var(--bg-anthracite);
-  padding: 1.2rem 8%;
+  background: var(--anthracite-grey);
+  padding: 1rem 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid var(--primary-orange);
+  border-bottom: 3px solid var(--hermes-orange);
 }
 
 header .logo {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
-  color: var(--text-white);
+  color: var(--white);
   letter-spacing: 1px;
 }
 
 header .logo span {
-  color: var(--primary-orange);
+  color: var(--hermes-orange);
 }
 
 nav a {
-  color: var(--text-white);
+  color: var(--white);
   text-decoration: none;
-  margin-left: 30px;
-  font-weight: 500;
-  font-size: 15px;
-  transition: 0.3s;
+  margin-left: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  color: var(--primary-orange);
+  color: var(--hermes-orange);
 }
 
-/* HERO SECTION - 核心稳重基调 */
+/* 3. HERO SECTION */
 .hero {
-  background: var(--bg-anthracite);
-  color: var(--text-white);
-  padding: 100px 8%;
+  background: var(--anthracite-grey);
+  color: var(--white);
+  padding: 100px 5%;
   text-align: center;
 }
 
-.hero h2 {
-  font-size: 42px;
+.hero h1 {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero p {
-  font-size: 20px;
-  max-width: 850px;
+  font-size: 1.2rem;
+  max-width: 800px;
   margin: 0 auto 30px;
   color: #CCCCCC;
 }
 
 .hero p span {
-  color: var(--primary-orange);
+  color: var(--hermes-orange);
   font-weight: 600;
 }
 
-/* 核心价值标签 */
 .hero-tags {
   margin-bottom: 40px;
 }
 
 .hero-tags span {
   display: inline-block;
-  padding: 6px 16px;
+  padding: 6px 15px;
   margin: 5px;
   border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 20px;
-  font-size: 14px;
+  border-radius: 30px;
+  font-size: 13px;
   color: #AAA;
 }
 
+/* 4. BUTTONS */
 .btn-primary {
-  background: var(--primary-orange);
-  padding: 14px 40px;
-  color: white;
+  background: var(--hermes-orange);
+  color: var(--white);
+  padding: 14px 35px;
   text-decoration: none;
   border-radius: 4px;
-  font-weight: 600;
+  font-weight: bold;
   display: inline-block;
   transition: 0.3s;
 }
@@ -115,17 +127,34 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* SERVICE/PRODUCT GRID */
+.btn-secondary {
+  border: 1px solid var(--white);
+  color: var(--white);
+  padding: 14px 35px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--white);
+  color: var(--anthracite-grey);
+}
+
+/* 5. SERVICES GRID */
 .services {
-  padding: 80px 8%;
-  background: white;
+  padding: 80px 0;
+  background: var(--white);
 }
 
 .services h3 {
   text-align: center;
+  font-size: 2rem;
   margin-bottom: 50px;
-  font-size: 30px;
-  color: var(--bg-anthracite);
+  color: var(--anthracite-grey);
 }
 
 .service-grid {
@@ -135,82 +164,142 @@ nav a:hover {
 }
 
 .service-item {
-  padding: 40px 30px;
-  background: var(--bg-light);
-  border-left: 4px solid var(--primary-orange);
+  padding: 40px;
+  background: var(--light-grey);
+  border-radius: 4px;
+  border-bottom: 3px solid transparent;
   transition: 0.3s;
 }
 
 .service-item:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-bottom: 3px solid var(--hermes-orange);
+  transform: translateY(-5px);
+}
+
+.service-item .icon {
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .service-item h4 {
-  font-size: 22px;
   margin-bottom: 15px;
-  color: var(--bg-anthracite);
+  font-size: 1.4rem;
 }
 
-/* WHY US / BACKGROUND SECTION */
+/* 6. CORE TEAM (FOUR PILLARS) */
+.core-team {
+  padding: 80px 0;
+  background: var(--light-grey);
+}
+
+.core-team h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  background: var(--white);
+  padding: 30px;
+  border-top: 4px solid var(--hermes-orange);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.team-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--anthracite-grey);
+}
+
+.expert-name {
+  color: var(--hermes-orange);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* 7. WHY US / PROTOCOL */
 .why-us {
-  padding: 80px 8%;
-  background: var(--bg-anthracite);
-  color: var(--text-white);
+  padding: 80px 0;
+  background: var(--white);
 }
 
 .why-us h3 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
-.why-us .grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  max-width: 1000px;
-  margin: auto;
+.why-grid ul {
+  list-style: none;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .why-us li {
-  margin-bottom: 15px;
-  list-style: none;
+  margin-bottom: 20px;
+  padding-left: 30px;
   position: relative;
-  padding-left: 25px;
+  font-size: 1.1rem;
 }
 
 .why-us li::before {
-  content: "✓";
-  color: var(--primary-orange);
+  content: "→";
+  color: var(--hermes-orange);
   position: absolute;
   left: 0;
   font-weight: bold;
 }
 
-/* CTA - 留资区 */
+/* 8. CTA SECTION */
 .cta {
-  background: var(--primary-orange);
-  color: white;
-  padding: 70px 8%;
+  background: var(--hermes-orange);
+  color: var(--white);
+  padding: 80px 5%;
   text-align: center;
 }
 
 .cta h3 {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
 }
 
-/* FOOTER */
+.btn-primary-alt {
+  background: var(--anthracite-grey);
+  color: var(--white);
+  padding: 16px 40px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 25px;
+  transition: 0.3s;
+}
+
+.btn-primary-alt:hover {
+  background: #000;
+}
+
+/* 9. FOOTER */
 footer {
-  background: #1A1D21;
-  color: #777;
+  background: #1a1d21;
+  color: #666;
   text-align: center;
-  padding: 30px 0;
+  padding: 40px 0;
   font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* 10. MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .hero h2 { font-size: 30px; }
-  .why-us .grid-2 { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  .btn-secondary { margin-left: 0; margin-top: 15px; display: block; }
+  .hero-tags span { display: block; }
 }
