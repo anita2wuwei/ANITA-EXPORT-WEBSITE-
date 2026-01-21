@@ -10,12 +10,12 @@
 }
 
 :root {
-  --hermes-orange: #F37021;    /* 主色：爱马仕橙 */
-  --anthracite-grey: #2F343A;  /* 背景：炭灰色 */
-  --light-grey: #F4F4F4;       /* 浅底色 */
-  --text-dark: #333333;        /* 主文字 */
-  --text-muted: #888888;       /* 辅助文字 */
-  --white: #FFFFFF;
+  --hermes-orange: #F37021;    /* 品牌橙 */
+  --anthracite-grey: #2B2D30;  /* 优化后的低饱和哑光深灰 */
+  --light-grey: #F8F9FA;       /* 洁净的浅灰背景 */
+  --text-dark: #1F2123;        /* 深炭色文字 */
+  --text-white: #FFFFFF;
+  --text-muted: #6C757D;       /* 低饱和辅助文字 */
 }
 
 body {
@@ -71,8 +71,9 @@ nav a:hover {
 
 /* 3. HERO SECTION */
 .hero {
-  background: var(--anthracite-grey);
-  color: var(--white);
+ .hero {
+  background: linear-gradient(135deg, #2B2D30 0%, #242629 100%);
+  color: var(--text-white);
   padding: 100px 5%;
   text-align: center;
 }
@@ -208,7 +209,7 @@ nav a:hover {
   background: var(--white);
   padding: 30px;
   border-top: 4px solid var(--hermes-orange);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .team-card h4 {
