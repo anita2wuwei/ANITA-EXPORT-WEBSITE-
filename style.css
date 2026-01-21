@@ -1,40 +1,68 @@
-/* --- WW EXPORT GLOBAL STYLES --- */
+/* --- WW EXPORT BOLD DESIGN (No Lines) --- */
 :root {
-  --brand-orange: #E67E22;
-  --primary-grey: #2E2E2E;
-  --secondary-grey: #6B6E73;
-  --light-bg: #F3F4F6;
+  --brand-orange: #E67E22;    /* 品牌橙 */
+  --primary-grey: #2E2E2E;    /* 高级深灰 */
+  --secondary-grey: #6B6E73;  /* 中性结构灰 */
+  --light-bg: #F3F4F6;        /* 浅背景灰 */
   --white: #FFFFFF;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', -apple-system, sans-serif; background: var(--light-bg); color: var(--primary-grey); line-height: 1.6; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--light-bg); 
+    color: var(--primary-grey); 
+    line-height: 1.6; 
+}
 
-/* 导航栏：深灰+橙色顶边 */
+/* 导航栏：沉浸式深灰大色块 */
 header {
   background: var(--primary-grey);
-  padding: 1rem 5%;
-  border-top: 5px solid var(--brand-orange);
+  padding: 1.5rem 5%;
   display: flex; justify-content: space-between; align-items: center;
-  position: sticky; top: 0; z-index: 1000;
 }
-.logo { color: var(--white); font-weight: 800; font-size: 24px; text-decoration: none; }
+.logo { color: var(--white); font-weight: 900; font-size: 26px; text-decoration: none; letter-spacing: -1px; }
 .logo span { color: var(--brand-orange); }
 
 nav a {
-  color: #BBB; text-decoration: none; margin-left: 25px;
-  font-size: 13px; font-weight: 600; text-transform: uppercase; transition: 0.3s;
+  color: var(--white); text-decoration: none; margin-left: 30px;
+  font-size: 14px; font-weight: 700; text-transform: uppercase; opacity: 0.8; transition: 0.3s;
 }
-nav a:hover { color: var(--brand-orange); }
+nav a:hover { opacity: 1; color: var(--brand-orange); }
 
-/* 容器与布局 */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 5%; }
-.section { padding: 80px 0; }
+/* 核心容器 */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 
-/* 按钮：高对比橙色 */
-.btn { display: inline-block; padding: 14px 35px; border-radius: 4px; font-weight: bold; text-decoration: none; transition: 0.3s; border: none; cursor: pointer; }
-.btn-orange { background: var(--brand-orange); color: var(--white); }
-.btn-orange:hover { filter: brightness(1.1); transform: translateY(-2px); }
+/* Hero区域：深灰大背景，直接撞色橙色按钮 */
+.hero {
+    background: var(--primary-grey);
+    color: var(--white);
+    padding: 120px 0;
+    text-align: center;
+}
+.hero h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; }
+.hero p { color: var(--secondary-grey); font-size: 1.2rem; margin-bottom: 40px; }
 
-/* 卡片通用样式 */
-.card { background: var(--white); padding: 30px; border-left: 4px solid var(--brand-orange); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+/* 按钮：色块设计，无边框 */
+.btn-orange {
+  background: var(--brand-orange);
+  color: var(--white);
+  padding: 18px 45px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 800;
+  display: inline-block;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(230, 126, 34, 0.2);
+}
+.btn-orange:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(230, 126, 34, 0.4); }
+
+/* 卡片设计：利用阴影和间距，而非边框线 */
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px; /* 稍微圆角增加现代感 */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.03); /* 极轻的阴影替代线条 */
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
