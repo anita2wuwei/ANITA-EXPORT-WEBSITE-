@@ -4,95 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WW Export | Precision-Engineered Manufacturing</title>
-  
-  <style>
-    /* --- 1. 核心配色与变量 (已调低灰色饱和度) --- */
-    :root {
-      --hermes-orange: #F37021;
-      --anthracite-grey: #2B2D30; 
-      --light-bg: #F8F9FA;
-      --text-dark: #1F2123;
-      --white: #FFFFFF;
-    }
-
-    /* --- 2. 基础复位 --- */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-      color: var(--text-dark); 
-      line-height: 1.6; 
-      background-color: var(--white);
-    }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
-
-    /* --- 3. 导航栏 --- */
-    header {
-      background: var(--anthracite-grey);
-      padding: 1rem 0;
-      border-bottom: 3px solid var(--hermes-orange);
-      position: sticky; top: 0; z-index: 1000;
-    }
-    header .container { display: flex; justify-content: space-between; align-items: center; }
-    .logo { color: var(--white); font-size: 24px; font-weight: 800; text-decoration: none; }
-    .logo span { color: var(--hermes-orange); }
-    nav a { color: var(--white); text-decoration: none; margin-left: 25px; font-size: 14px; font-weight: 600; text-transform: uppercase; }
-    nav a:hover { color: var(--hermes-orange); }
-
-    /* --- 4. Hero 首屏 (修复了你之前代码的嵌套错误) --- */
-    .hero {
-      background: linear-gradient(135deg, #2B2D30 0%, #1A1C1E 100%);
-      color: var(--white);
-      padding: 100px 0;
-      text-align: center;
-    }
-    .hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2; }
-    .hero p { font-size: 1.2rem; max-width: 850px; margin: 0 auto 30px; color: #BBB; }
-    .hero p span { color: var(--hermes-orange); font-weight: 600; }
-    .hero-tags { margin-bottom: 40px; }
-    .hero-tags span { 
-      display: inline-block; padding: 6px 15px; margin: 5px; 
-      border: 1px solid rgba(255,255,255,0.2); border-radius: 30px; font-size: 13px; color: #AAA; 
-    }
-
-    /* --- 5. 按钮 --- */
-    .btn { display: inline-block; padding: 14px 35px; border-radius: 4px; font-weight: bold; text-decoration: none; transition: 0.3s; }
-    .btn-orange { background: var(--hermes-orange); color: var(--white); border: none; }
-    .btn-orange:hover { background: #d65d1a; transform: translateY(-2px); }
-    .btn-outline { border: 1px solid var(--white); color: var(--white); margin-left: 10px; }
-    .btn-outline:hover { background: var(--white); color: var(--anthracite-grey); }
-
-    /* --- 6. 专家团队卡片 --- */
-    .section { padding: 80px 0; }
-    .section-title { text-align: center; font-size: 2rem; margin-bottom: 50px; }
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-    .team-card { 
-      background: var(--white); padding: 30px; 
-      border-top: 4px solid var(--hermes-orange); 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-    }
-    .expert-tag { color: var(--hermes-orange); font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: block; }
-    .team-card h4 { margin-bottom: 10px; font-size: 18px; }
-    .team-card p { font-size: 14px; color: #666; }
-
-    /* --- 7. 页脚 --- */
-    footer { background: #1A1C1E; color: #666; text-align: center; padding: 40px 0; font-size: 14px; }
-
-    /* 移动端适配 */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.2rem; }
-      .btn-outline { margin-left: 0; margin-top: 15px; display: block; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <div class="container">
-    <a href="#" class="logo">WW <span>EXPORT</span></a>
+  <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+    <a href="index.html" class="logo" style="text-decoration: none; color: #fff; font-size: 24px; font-weight: 800;">WW <span>EXPORT</span></a>
+    
     <nav>
-      <a href="#">Products</a>
-      <a href="#">Insights</a>
-      <a href="#">Contact</a>
+      <a href="index.html" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 14px; font-weight: 600; text-transform: uppercase;">Home</a>
+      <a href="products.html" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 14px; font-weight: 600; text-transform: uppercase;">Products</a>
+      <a href="blog.html" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 14px; font-weight: 600; text-transform: uppercase;">Insights</a>
+      <a href="contact.html" style="color: #fff; text-decoration: none; margin-left: 25px; font-size: 14px; font-weight: 600; text-transform: uppercase;">Contact</a>
     </nav>
   </div>
 </header>
@@ -100,7 +24,7 @@
 <section class="hero">
   <div class="container">
     <h1>Precision-Engineered Manufacturing & Supply Chain Solutions</h1>
-    <p>Professional products backed by <span>20 years of manufacturing excellence</span> and <span>enterprise-grade auditing standards</span>. We provide the technical assurance global markets demand.</p>
+    <p>Professional products backed by <span>20 years of manufacturing excellence</span> and <span>enterprise-grade auditing standards</span>.</p>
     
     <div class="hero-tags">
       <span>Battery Safety: Apple-tier QC</span>
@@ -109,41 +33,46 @@
     </div>
 
     <div class="hero-btns">
-      <a href="#" class="btn btn-orange">View Products</a>
-      <a href="#" class="btn btn-outline">Consult a Specialist</a>
+      <a href="products.html" class="btn btn-orange">View Products</a>
+      <a href="contact.html" class="btn btn-outline" style="border: 1px solid #fff; color: #fff; padding: 12px 30px; text-decoration: none; border-radius: 4px; margin-left: 10px; display: inline-block;">Consult a Specialist</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <h3 class="section-title">The Expertise Behind Your Supply Chain</h3>
-    <div class="team-grid">
-      <div class="team-card">
-        <span class="expert-tag">13 Years Experience</span>
+    <h3 class="section-title" style="text-align: center; font-size: 2rem; margin-bottom: 50px;">The Expertise Behind Your Supply Chain</h3>
+    <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+      
+      <div class="team-card" style="background: #fff; padding: 30px; border-top: 4px solid #F37021; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <span style="color: #F37021; font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: block;">13 Years Experience</span>
         <h4>Market & Strategy</h4>
-        <p>Expert in certification and supply chain finance for listed precision manufacturing firms.</p>
+        <p style="font-size: 14px; color: #666;">Expert in certification and supply chain finance for listed precision manufacturing firms.</p>
       </div>
-      <div class="team-card">
-        <span class="expert-tag">12 Years Experience</span>
+
+      <div class="team-card" style="background: #fff; padding: 30px; border-top: 4px solid #F37021; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <span style="color: #F37021; font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: block;">12 Years Experience</span>
         <h4>Sourcing & Audit</h4>
-        <p>E-Mobility veteran specialized in cost engineering and risk control for global operations.</p>
+        <p style="font-size: 14px; color: #666;">E-Mobility veteran specialized in cost engineering and risk control for global operations.</p>
       </div>
-      <div class="team-card">
-        <span class="expert-tag">15 Years Experience</span>
-        <h4>Quality & Lithium Tech</h4>
-        <p>Former Quality Manager for top-tier battery suppliers. Focus on yield and long-term stability.</p>
+
+      <div class="team-card" style="background: #fff; padding: 30px; border-top: 4px solid #F37021; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <span style="color: #F37021; font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: block;">15 Years Experience</span>
+        <h4>Quality & Tech</h4>
+        <p style="font-size: 14px; color: #666;">Former Quality Manager for top-tier battery suppliers. Focus on yield and long-term stability.</p>
       </div>
-      <div class="team-card">
-        <span class="expert-tag">13 Years Experience</span>
+
+      <div class="team-card" style="background: #fff; padding: 30px; border-top: 4px solid #F37021; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <span style="color: #F37021; font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; display: block;">13 Years Experience</span>
         <h4>Trade Strategist</h4>
-        <p>Expert in global logistics and compliant transshipment to mitigate international trade barriers.</p>
+        <p style="font-size: 14px; color: #666;">Expert in global logistics and compliant transshipment to mitigate international trade barriers.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<footer>
+<footer style="background: #1A1C1E; color: #666; text-align: center; padding: 40px 0; font-size: 14px; margin-top: 50px;">
   <div class="container">
     <p>© 2026 WW EXPORT | Professional Engineering & Strategic Sourcing.</p>
   </div>
