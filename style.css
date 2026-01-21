@@ -1,304 +1,65 @@
 /* ==========================================================================
-   WW EXPORT - PROFESSIONAL STYLESHEET (Refined Hermès Orange & Anthracite Grey)
+   WWELEC.COM GLOBAL STYLES (Refined Low-Saturation Edition)
    ========================================================================== */
 
-/* 1. RESET & BASE */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
-  --hermes-orange: #F37021;    /* 品牌橙 */
-  --anthracite-grey: #2B2D30;  /* 优化后的低饱和哑光深灰 */
-  --light-grey: #F8F9FA;       /* 洁净的浅灰背景 */
-  --text-dark: #1F2123;        /* 深炭色文字 */
-  --text-white: #FFFFFF;
-  --text-muted: #6C757D;       /* 低饱和辅助文字 */
-  --pure-white: #FFFFFF;
+  --hermes-orange: #F37021;
+  --anthracite-grey: #2B2D30; 
+  --deep-bg: #1A1C1E;
+  --light-bg: #F8F9FA;
+  --text-dark: #1F2123;
+  --text-muted: #666666;
+  --white: #FFFFFF;
 }
 
-body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  color: var(--text-dark);
-  line-height: 1.6;
-  background-color: var(--pure-white);
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+  font-family: 'Segoe UI', Tahoma, Arial, sans-serif; 
+  color: var(--text-dark); 
+  line-height: 1.6; 
+  background-color: var(--white);
 }
 
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 5%;
-}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 
-/* 2. HEADER & NAVIGATION */
+/* HEADER */
 header {
   background: var(--anthracite-grey);
-  padding: 1rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 0;
   border-bottom: 3px solid var(--hermes-orange);
+  position: sticky; top: 0; z-index: 1000;
 }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { color: var(--white); font-size: 24px; font-weight: 800; text-decoration: none; }
+.logo span { color: var(--hermes-orange); }
+nav a { color: var(--white); text-decoration: none; margin-left: 25px; font-size: 14px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
+nav a:hover { color: var(--hermes-orange); }
 
-header .logo {
-  font-size: 22px;
-  font-weight: 800;
+/* HERO (Sub-pages use a smaller hero) */
+.sub-hero {
+  background: linear-gradient(135deg, var(--anthracite-grey) 0%, var(--deep-bg) 100%);
   color: var(--white);
-  letter-spacing: 1px;
-}
-
-header .logo span {
-  color: var(--hermes-orange);
-}
-
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 14px;
-  font-weight: 600;
-  transition: 0.3s ease;
-  text-transform: uppercase;
-}
-
-nav a:hover {
-  color: var(--hermes-orange);
-}
-
-/* 3. HERO SECTION */
-.hero {
-  /* 使用渐变色增加质感，避免纯色块的沉闷 */
-  background: linear-gradient(135deg, #2B2D30 0%, #242629 100%);
-  color: var(--text-white);
-  padding: 100px 5%;
+  padding: 60px 0;
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
+/* BUTTONS */
+.btn { display: inline-block; padding: 12px 30px; border-radius: 4px; font-weight: bold; text-decoration: none; transition: 0.3s; border: none; cursor: pointer; }
+.btn-orange { background: var(--hermes-orange); color: var(--white); }
+.btn-orange:hover { background: #d65d1a; transform: translateY(-2px); }
 
-.hero p {
-  font-size: 1.2rem;
-  max-width: 800px;
-  margin: 0 auto 30px;
-  color: #CCCCCC;
-}
+/* CONTENT SECTIONS */
+.section { padding: 80px 0; }
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 50px; color: var(--anthracite-grey); }
 
-.hero p span {
-  color: var(--hermes-orange);
-  font-weight: 600;
-}
+/* FOOTER */
+footer { background: var(--deep-bg); color: #666; text-align: center; padding: 40px 0; font-size: 14px; margin-top: 50px; }
 
-.hero-tags {
-  margin-bottom: 40px;
-}
-
-.hero-tags span {
-  display: inline-block;
-  padding: 6px 15px;
-  margin: 5px;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 30px;
-  font-size: 13px;
-  color: #AAA;
-}
-
-/* 4. BUTTONS */
-.btn-primary {
-  background: var(--hermes-orange);
-  color: var(--white);
-  padding: 14px 35px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  transition: 0.3s;
-  border: none;
-}
-
-.btn-primary:hover {
-  background: #d65d1a;
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  border: 1px solid var(--white);
-  color: var(--white);
-  padding: 14px 35px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  margin-left: 10px;
-  transition: 0.3s;
-}
-
-.btn-secondary:hover {
-  background: var(--white);
-  color: var(--anthracite-grey);
-}
-
-/* 5. SERVICES GRID */
-.services {
-  padding: 80px 0;
-  background: var(--pure-white);
-}
-
-.services h3 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-  color: var(--anthracite-grey);
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.service-item {
-  padding: 40px;
-  background: var(--light-grey);
-  border-radius: 4px;
-  border-bottom: 3px solid transparent;
-  transition: 0.3s;
-}
-
-.service-item:hover {
-  border-bottom: 3px solid var(--hermes-orange);
-  transform: translateY(-5px);
-}
-
-.service-item .icon {
-  font-size: 30px;
-  margin-bottom: 15px;
-}
-
-.service-item h4 {
-  margin-bottom: 15px;
-  font-size: 1.4rem;
-}
-
-/* 6. CORE TEAM (FOUR PILLARS) */
-.core-team {
-  padding: 80px 0;
-  background: var(--light-grey);
-}
-
-.core-team h3 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 50px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.team-card {
-  background: var(--pure-white);
-  padding: 30px;
-  border-top: 4px solid var(--hermes-orange);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-}
-
-.team-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  color: var(--anthracite-grey);
-}
-
-.expert-name {
-  color: var(--hermes-orange);
-  font-size: 13px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  display: block;
-}
-
-/* 7. WHY US / PROTOCOL */
-.why-us {
-  padding: 80px 0;
-  background: var(--pure-white);
-}
-
-.why-us h3 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
-
-.why-grid ul {
-  list-style: none;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.why-us li {
-  margin-bottom: 20px;
-  padding-left: 30px;
-  position: relative;
-  font-size: 1.1rem;
-}
-
-.why-us li::before {
-  content: "→";
-  color: var(--hermes-orange);
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-
-/* 8. CTA SECTION */
-.cta {
-  background: var(--hermes-orange);
-  color: var(--white);
-  padding: 80px 5%;
-  text-align: center;
-}
-
-.cta h3 {
-  font-size: 2.2rem;
+/* SHARED COMPONENTS: CARDS */
+.card {
+  background: var(--white); padding: 30px; 
+  border-top: 4px solid var(--hermes-orange); 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   margin-bottom: 20px;
 }
-
-.btn-primary-alt {
-  background: var(--anthracite-grey);
-  color: var(--white);
-  padding: 16px 40px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-  display: inline-block;
-  margin-top: 25px;
-  transition: 0.3s;
-}
-
-.btn-primary-alt:hover {
-  background: #000;
-}
-
-/* 9. FOOTER */
-footer {
-  background: #1a1d21;
-  color: #666;
-  text-align: center;
-  padding: 40px 0;
-  font-size: 14px;
-}
-
-/* 10. MOBILE RESPONSIVE */
-@media (max-width:
