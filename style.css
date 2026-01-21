@@ -1,153 +1,216 @@
-/* RESET */
+/* RESET & GLOBAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #333;
-  line-height: 1.6;
+:root {
+  --primary-orange: #F37021; /* 爱马仕橙 */
+  --bg-anthracite: #2F343A;  /* 炭灰色 */
+  --bg-light: #F4F4F4;       /* 浅灰色 */
+  --text-main: #333333;
+  --text-white: #FFFFFF;
 }
 
-/* HEADER */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  background-color: var(--bg-light);
+}
+
+/* HEADER - 保持专业与简洁 */
 header {
-  background: #f26522;
-  padding: 16px 5%;
+  background: var(--bg-anthracite);
+  padding: 1.2rem 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--primary-orange);
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+header .logo span {
+  color: var(--primary-orange);
 }
 
 nav a {
-  color: white;
+  color: var(--text-white);
   text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
+  margin-left: 30px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--primary-orange);
 }
 
-/* HERO SECTION */
+/* HERO SECTION - 核心稳重基调 */
 .hero {
+  background: var(--bg-anthracite);
+  color: var(--text-white);
+  padding: 100px 8%;
   text-align: center;
-  padding: 80px 5%;
-  background: #fafafa;
-}
-
-.hero img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  margin-bottom: 40px;
-  border-radius: 10px;
 }
 
 .hero h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 12px;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
-  opacity: 0.8;
+  font-size: 20px;
+  max-width: 850px;
+  margin: 0 auto 30px;
+  color: #CCCCCC;
+}
+
+.hero p span {
+  color: var(--primary-orange);
+  font-weight: 600;
+}
+
+/* 核心价值标签 */
+.hero-tags {
+  margin-bottom: 40px;
+}
+
+.hero-tags span {
+  display: inline-block;
+  padding: 6px 16px;
+  margin: 5px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  font-size: 14px;
+  color: #AAA;
 }
 
 .btn-primary {
-  background: #f26522;
-  padding: 12px 32px;
+  background: var(--primary-orange);
+  padding: 14px 40px;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s;
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  background: #d65d1a;
+  transform: translateY(-2px);
 }
 
-/* SERVICE GRID */
+/* SERVICE/PRODUCT GRID */
 .services {
-  padding: 70px 8%;
+  padding: 80px 8%;
   background: white;
 }
 
 .services h3 {
   text-align: center;
-  margin-bottom: 40px;
-  font-size: 26px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: var(--bg-anthracite);
 }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
 .service-item {
-  padding: 20px;
-  border-radius: 8px;
-  background: #fafafa;
-  border: 1px solid #eee;
-  text-align: center;
+  padding: 40px 30px;
+  background: var(--bg-light);
+  border-left: 4px solid var(--primary-orange);
+  transition: 0.3s;
+}
+
+.service-item:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .service-item h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: var(--bg-anthracite);
 }
 
-/* WHY US SECTION */
+/* WHY US / BACKGROUND SECTION */
 .why-us {
-  padding: 70px 5%;
-  background: #f8f8f8;
+  padding: 80px 8%;
+  background: var(--bg-anthracite);
+  color: var(--text-white);
 }
 
 .why-us h3 {
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
 }
 
-.why-us ul {
-  max-width: 700px;
+.why-us .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1000px;
   margin: auto;
 }
 
-.why-us ul li {
-  padding: 8px 0;
-  font-size: 18px;
+.why-us li {
+  margin-bottom: 15px;
+  list-style: none;
+  position: relative;
+  padding-left: 25px;
 }
 
-/* CTA */
+.why-us li::before {
+  content: "✓";
+  color: var(--primary-orange);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* CTA - 留资区 */
 .cta {
-  background: #f26522;
+  background: var(--primary-orange);
   color: white;
-  padding: 60px 5%;
+  padding: 70px 8%;
   text-align: center;
 }
 
 .cta h3 {
-  font-size: 28px;
-  margin-bottom: 12px;
-}
-
-.cta p {
-  font-size: 18px;
-  opacity: 0.9;
-  margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 /* FOOTER */
 footer {
-  background: #222;
-  color: white;
+  background: #1A1D21;
+  color: #777;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0;
   font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h2 { font-size: 30px; }
+  .why-us .grid-2 { grid-template-columns: 1fr; }
 }
