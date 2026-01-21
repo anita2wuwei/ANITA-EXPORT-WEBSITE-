@@ -1,1 +1,75 @@
-<html><body><h1>Blog</h1><p>Blog placeholder.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights | WW Export - Supply Chain Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .blog-container { padding: 80px 0; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+    .blog-card { background: white; border: 1px solid #eee; transition: 0.3s; }
+    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    .blog-content { padding: 25px; }
+    .blog-category { color: var(--hermes-orange); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+    .blog-content h4 { margin: 10px 0; font-size: 1.4rem; color: var(--anthracite-grey); }
+    .blog-content p { color: #666; font-size: 0.95rem; margin-bottom: 20px; }
+    .read-more { color: var(--hermes-orange); text-decoration: none; font-weight: 600; font-size: 14px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">WW <span>EXPORT</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" style="padding: 60px 5%;">
+  <h1>Industry Insights & Intelligence</h1>
+  <p>Deep-dives into compliance, battery technology, and global trade strategies from the perspective of industry veterans.</p>
+</section>
+
+<section class="blog-container">
+  <div class="section-container">
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-content">
+          <span class="blog-category">Compliance</span>
+          <h4>Why Your BMS Certification is the "Hidden Trap" in ESS Export</h4>
+          <p>Many manufacturers claim full certification, but is the BMS actually included in the scope? Learn how to audit your supplier's UL/CE reports before the customs seizure.</p>
+          <a href="#" class="read-more">Read Full Analysis →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-content">
+          <span class="blog-category">Tariff Strategy</span>
+          <h4>Navigating 301 Tariffs: The Legal Path of Transshipment</h4>
+          <p>A breakdown of the "Substantial Transformation" principle. How we utilize Southeast Asian hubs to optimize landed costs for US importers while remaining 100% compliant.</p>
+          <a href="#" class="read-more">Read Full Analysis →</a>
+        </div>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-content">
+          <span class="blog-category">Quality Control</span>
+          <h4>The Apple-Supplier Rigor: Quality Beyond Final Inspection</h4>
+          <p>Applying semiconductor-grade lifecycle management to E-mobility controllers. Why 20 years of manufacturing experience matters in the first 100 days of product launch.</p>
+          <a href="#" class="read-more">Read Full Analysis →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 WW Export | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
