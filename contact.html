@@ -3,122 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | WWELEC - Professional Manufacturing Support</title>
+  <title>Contact | WWELEC - Expert Diagnosis</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* 针对联系页面的增强样式 */
-    .contact-wrapper { padding: 80px 0; background-color: var(--light-grey); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
-    
-    .contact-info h2 { font-size: 2.5rem; color: var(--anthracite-grey); margin-bottom: 25px; }
-    .contact-info p { margin-bottom: 30px; color: #555; }
-
-    .service-protocol { 
-      background: white; 
-      padding: 30px; 
-      border-left: 4px solid var(--hermes-orange); 
-      margin-top: 40px;
-    }
-    .service-protocol h5 { color: var(--hermes-orange); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-    .protocol-item { margin-bottom: 10px; font-weight: 600; color: var(--anthracite-grey); }
-    .protocol-item span { color: var(--text-muted); font-weight: 400; font-size: 0.9rem; margin-left: 10px; }
-
-    /* 表单样式 */
-    .contact-form-container { background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 60px 0; align-items: start; }
     .form-group { margin-bottom: 25px; }
-    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 0.9rem; color: var(--anthracite-grey); }
+    .form-group label { display: block; font-size: 11px; font-weight: 800; margin-bottom: 8px; color: var(--anthracite-grey); text-transform: uppercase; letter-spacing: 1px; }
     .form-group input, .form-group select, .form-group textarea { 
-      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px; font-family: inherit; font-size: 1rem;
+      width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 2px; font-family: inherit; background: #fff;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
-      border-color: var(--hermes-orange); outline: none; 
-    }
-
-    .btn-submit { 
-      background: var(--hermes-orange); color: white; border: none; padding: 16px 40px; 
-      font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; text-transform: uppercase;
-    }
-    .btn-submit:hover { background: var(--anthracite-grey); }
-
-    @media (max-width: 992px) {
-      .contact-grid { grid-template-columns: 1fr; gap: 50px; }
-      .contact-form-container { padding: 30px; }
-    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--hermes-orange); outline: none; box-shadow: 0 0 0 2px rgba(243, 112, 33, 0.1); }
+    .sop-box { background: var(--light-bg); padding: 35px; border-left: 5px solid var(--hermes-orange); }
+    .sop-box p { margin-bottom: 15px; font-size: 15px; }
+    .sop-box strong { color: var(--hermes-orange); font-size: 18px; display: block; margin-bottom: 2px; }
+    @media (max-width: 992px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
   </style>
 </head>
-
 <body>
 
 <header>
-  <div class="logo">WW<span>ELEC</span></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="container">
+    <a href="index.html" class="logo">WW <span>ELEC</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section class="contact-wrapper">
-  <div class="section-container">
-    <div class="contact-grid">
-      
-      <div class="contact-info">
-        <h2>Connect with Our Experts</h2>
-        <p>Whether you are seeking stable manufacturing for Energy Storage Systems or navigating complex trade compliance for E-Mobility, our team provides objective, engineering-first solutions.</p>
-        
-        <div class="contact-method">
-          <p><strong>Business Inquiry:</strong><br>Email: business@wwelec.com</p>
-          <p><strong>Technical Support:</strong><br>Email: support@wwelec.com</p>
-        </div>
-
-        <div class="service-protocol">
-          <h5>Standard Operation Protocol</h5>
-          <div class="protocol-item">24 Hours <span>Initial response to all inquiries</span></div>
-          <div class="protocol-item">48 Hours <span>Technical assessment & feasibility feedback</span></div>
-          <div class="protocol-item">5 Business Days <span>Full project resolution or service roadmap</span></div>
-        </div>
-      </div>
-
-      <div class="contact-form-container">
-        <form action="#">
-          <div class="form-group">
-            <label>FULL NAME</label>
-            <input type="text" name="name" placeholder="E.g. John Doe" required>
-          </div>
-          
-          <div class="form-group">
-            <label>COMPANY EMAIL</label>
-            <input type="email" name="email" placeholder="john@company.com" required>
-          </div>
-
-          <div class="form-group">
-            <label>INTERESTED PRODUCT / SERVICE</label>
-            <select name="subject">
-              <option value="ess">Energy Storage Systems (ESS)</option>
-              <option value="mobility">Smart E-Mobility Solutions</option>
-              <option value="cleaning">Cleaning Appliances</option>
-              <option value="trade">Trade Strategy & Tariff Mitigation</option>
-              <option value="audit">Supply Chain Quality Audit</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>PRIMARY CHALLENGE OR SPECIFICATION</label>
-            <textarea name="message" rows="5" placeholder="Please provide brief technical requirements or current supply chain challenges..."></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">Submit Inquiry</button>
-        </form>
-      </div>
-
-    </div>
+<section class="sub-hero">
+  <div class="container">
+    <h1>[REQUEST AN EXPERT DIAGNOSIS]</h1>
+    <p>[Professional manufacturing assessment and sourcing solutions.]</p>
   </div>
 </section>
 
-<footer>
-  <p>© 2026 WWELEC.COM | Precision Manufacturing & Strategic Sourcing.</p>
-</footer>
+<div class="container contact-layout">
+  <div class="contact-text">
+    <h2 style="margin-bottom:20px; font-size: 2rem;">[LET'S DISCUSS YOUR PROJECT]</h2>
+    <p style="margin-bottom:30px; color: var(--text-muted);">[Our engineering veterans provide objective analysis on compliance, technical specifications, and global trade strategy.]</p>
+    
+    <div class="sop-box">
+      <p><strong>[24 HOURS]</strong> [Initial inquiry review and response.]</p>
+      <p><strong>[48 HOURS]</strong> [Technical feasibility and strategic feedback.]</p>
+      <p><strong>[5 BUSINESS DAYS]</strong> [Comprehensive service roadmap or resolution.]</p>
+    </div>
+  </div>
 
+  <div class="contact-form-card" style="background: white; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border-radius: 4px;">
+    <form action="#">
+      <div class="form-group">
+        <label>[YOUR FULL NAME]</label>
+        <input type="text" placeholder="e.g. John Smith">
+      </div>
+      <div class="form-group">
+        <label>[BUSINESS EMAIL]</label>
+        <input type="email" placeholder="email@company.com">
+      </div>
+      <div class="form-group">
+        <label>[NATURE OF INQUIRY]</label>
+        <select>
+          <option>[PRODUCT SOURCING - ESS / MOBILITY]</option>
+          <option>[SUPPLY CHAIN QUALITY AUDIT]</option>
+          <option>[TARIFF & TRADE COMPLIANCE]</option>
+          <option>[OTHER TECHNICAL CONSULTATION]</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>[PROJECT SPECIFICATIONS / CHALLENGES]</label>
+        <textarea rows="5" placeholder="[Please provide a brief overview of your technical requirements...]"></textarea>
+      </div>
+      <button type="submit" class="btn btn-orange" style="width: 100%; padding: 16px;">[SEND INQUIRY]</button>
+    </form>
+  </div>
+</div>
+
+<footer><p>© 2026 WWELEC | Global Standards. Precision Execution.</p></footer>
 </body>
 </html>
