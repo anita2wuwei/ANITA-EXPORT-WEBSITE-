@@ -3,30 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | WW Export - Request an Expert Diagnosis</title>
+  <title>Contact Us | WWELEC - Professional Manufacturing Support</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .contact-container { padding: 80px 0; background: var(--light-grey); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
-    .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
-    .contact-method { margin-bottom: 30px; }
-    .contact-method h5 { color: var(--hermes-orange); text-transform: uppercase; margin-bottom: 5px; }
+    /* 针对联系页面的增强样式 */
+    .contact-wrapper { padding: 80px 0; background-color: var(--light-grey); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
     
-    .contact-form { background: white; padding: 40px; border-radius: 4px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
-    .form-group input, .form-group select, .form-group textarea { 
-      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;
+    .contact-info h2 { font-size: 2.5rem; color: var(--anthracite-grey); margin-bottom: 25px; }
+    .contact-info p { margin-bottom: 30px; color: #555; }
+
+    .service-protocol { 
+      background: white; 
+      padding: 30px; 
+      border-left: 4px solid var(--hermes-orange); 
+      margin-top: 40px;
     }
-    .form-group input:focus { border-color: var(--hermes-orange); outline: none; }
-    
-    .diagnosis-note { background: #fff5ef; border-left: 4px solid var(--hermes-orange); padding: 15px; margin-bottom: 20px; font-size: 14px; }
+    .service-protocol h5 { color: var(--hermes-orange); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+    .protocol-item { margin-bottom: 10px; font-weight: 600; color: var(--anthracite-grey); }
+    .protocol-item span { color: var(--text-muted); font-weight: 400; font-size: 0.9rem; margin-left: 10px; }
+
+    /* 表单样式 */
+    .contact-form-container { background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+    .form-group { margin-bottom: 25px; }
+    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 0.9rem; color: var(--anthracite-grey); }
+    .form-group input, .form-group select, .form-group textarea { 
+      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px; font-family: inherit; font-size: 1rem;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
+      border-color: var(--hermes-orange); outline: none; 
+    }
+
+    .btn-submit { 
+      background: var(--hermes-orange); color: white; border: none; padding: 16px 40px; 
+      font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; text-transform: uppercase;
+    }
+    .btn-submit:hover { background: var(--anthracite-grey); }
+
+    @media (max-width: 992px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 50px; }
+      .contact-form-container { padding: 30px; }
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="logo">WW <span>EXPORT</span></div>
+  <div class="logo">WW<span>ELEC</span></div>
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
@@ -35,59 +59,65 @@
   </nav>
 </header>
 
-<section class="contact-container">
+<section class="contact-wrapper">
   <div class="section-container">
     <div class="contact-grid">
+      
       <div class="contact-info">
-        <h2>Let’s Talk Engineering & Strategy</h2>
-        <p>Whether you need to secure a high-quality product line or optimize your global trade routes, our veterans are ready to assist.</p>
+        <h2>Connect with Our Experts</h2>
+        <p>Whether you are seeking stable manufacturing for Energy Storage Systems or navigating complex trade compliance for E-Mobility, our team provides objective, engineering-first solutions.</p>
         
-        <div class="contact-method" style="margin-top: 40px;">
-          <h5>Service Standards</h5>
-          <p><strong>24h</strong> Response Guarantee<br><strong>48h</strong> Technical Solution<br><strong>5-Day</strong> Resolution Protocol</p>
+        <div class="contact-method">
+          <p><strong>Business Inquiry:</strong><br>Email: business@wwelec.com</p>
+          <p><strong>Technical Support:</strong><br>Email: support@wwelec.com</p>
         </div>
 
-        <div class="contact-method">
-          <h5>Direct Contact</h5>
-          <p>Email: business@wwexport.com<br>WhatsApp: +86-XXXX-XXXX-XXXX</p>
+        <div class="service-protocol">
+          <h5>Standard Operation Protocol</h5>
+          <div class="protocol-item">24 Hours <span>Initial response to all inquiries</span></div>
+          <div class="protocol-item">48 Hours <span>Technical assessment & feasibility feedback</span></div>
+          <div class="protocol-item">5 Business Days <span>Full project resolution or service roadmap</span></div>
         </div>
       </div>
 
-      <div class="contact-form">
-        <div class="diagnosis-note">
-          <strong>Expert Diagnosis:</strong> Briefly describe your current supply chain challenge, and our specialists (ex-Ninebot/Sunwoda) will provide a preliminary assessment within 24 hours.
-        </div>
+      <div class="contact-form-container">
         <form action="#">
           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Your Name" required>
+            <label>FULL NAME</label>
+            <input type="text" name="name" placeholder="E.g. John Doe" required>
           </div>
+          
           <div class="form-group">
-            <label>Company Email</label>
-            <input type="email" placeholder="email@company.com" required>
+            <label>COMPANY EMAIL</label>
+            <input type="email" name="email" placeholder="john@company.com" required>
           </div>
+
           <div class="form-group">
-            <label>Primary Interest</label>
-            <select>
-              <option>Energy Storage Systems (ESS)</option>
-              <option>Smart E-Mobility</option>
-              <option>Transshipment / Tariff Strategy</option>
-              <option>Quality Audit Service</option>
+            <label>INTERESTED PRODUCT / SERVICE</label>
+            <select name="subject">
+              <option value="ess">Energy Storage Systems (ESS)</option>
+              <option value="mobility">Smart E-Mobility Solutions</option>
+              <option value="cleaning">Cleaning Appliances</option>
+              <option value="trade">Trade Strategy & Tariff Mitigation</option>
+              <option value="audit">Supply Chain Quality Audit</option>
             </select>
           </div>
+
           <div class="form-group">
-            <label>Your Challenge / Requirements</label>
-            <textarea rows="5" placeholder="E.g., We are facing high tariffs in the US market, or We need a more reliable battery supplier..."></textarea>
+            <label>PRIMARY CHALLENGE OR SPECIFICATION</label>
+            <textarea name="message" rows="5" placeholder="Please provide brief technical requirements or current supply chain challenges..."></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
+
+          <button type="submit" class="btn-submit">Submit Inquiry</button>
         </form>
       </div>
+
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 WW Export | All Rights Reserved.</p>
+  <p>© 2026 WWELEC.COM | Precision Manufacturing & Strategic Sourcing.</p>
 </footer>
 
 </body>
