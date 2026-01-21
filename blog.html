@@ -3,24 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insights | WW Export - Supply Chain Intelligence</title>
+  <title>Industry Insights | WWELEC - Manufacturing & Compliance Intelligence</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .blog-container { padding: 80px 0; }
+    /* 博客页面专属样式 */
+    .blog-hero { background: var(--anthracite-grey); padding: 60px 0; text-align: center; color: white; border-bottom: 1px solid #444; }
+    .blog-container { padding: 80px 0; background: var(--white); }
     .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-    .blog-card { background: white; border: 1px solid #eee; transition: 0.3s; }
-    .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-    .blog-content { padding: 25px; }
-    .blog-category { color: var(--hermes-orange); font-size: 12px; font-weight: 700; text-transform: uppercase; }
-    .blog-content h4 { margin: 10px 0; font-size: 1.4rem; color: var(--anthracite-grey); }
-    .blog-content p { color: #666; font-size: 0.95rem; margin-bottom: 20px; }
-    .read-more { color: var(--hermes-orange); text-decoration: none; font-weight: 600; font-size: 14px; }
+    
+    .blog-card { 
+      background: var(--white); 
+      border: 1px solid #eee; 
+      display: flex; 
+      flex-direction: column; 
+      transition: all 0.3s ease;
+    }
+    .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--hermes-orange); }
+    
+    .blog-image { 
+      width: 100%; 
+      height: 220px; 
+      background: var(--bg-light); 
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .blog-body { padding: 30px; flex-grow: 1; }
+    .blog-meta { color: var(--hermes-orange); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block; }
+    .blog-body h4 { font-size: 1.5rem; margin-bottom: 15px; color: var(--anthracite-grey); line-height: 1.3; }
+    .blog-body p { color: #666; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
+    
+    .read-more-btn { 
+      color: var(--anthracite-grey); 
+      text-decoration: none; 
+      font-weight: 700; 
+      font-size: 14px; 
+      display: inline-flex; 
+      align-items: center; 
+      transition: 0.2s;
+    }
+    .read-more-btn:hover { color: var(--hermes-orange); }
+    .read-more-btn::after { content: '→'; margin-left: 8px; }
+
+    /* 侧边栏留资框 */
+    .sidebar-cta { 
+      background: var(--bg-light); 
+      padding: 30px; 
+      margin-top: 50px; 
+      border-left: 4px solid var(--hermes-orange);
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">WW <span>EXPORT</span></div>
+  <div class="logo">WW<span>ELEC</span></div>
   <nav>
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
@@ -29,46 +71,65 @@
   </nav>
 </header>
 
-<section class="hero" style="padding: 60px 5%;">
-  <h1>Industry Insights & Intelligence</h1>
-  <p>Deep-dives into compliance, battery technology, and global trade strategies from the perspective of industry veterans.</p>
+<section class="blog-hero">
+  <div class="section-container">
+    <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Supply Chain Intelligence</h1>
+    <p style="color: #aaa; max-width: 700px; margin: 0 auto;">Objective analysis on battery safety, manufacturing audits, and global trade compliance for the Energy & Mobility sectors.</p>
+  </div>
 </section>
 
 <section class="blog-container">
   <div class="section-container">
     <div class="blog-grid">
+      
       <article class="blog-card">
-        <div class="blog-content">
-          <span class="blog-category">Compliance</span>
-          <h4>Why Your BMS Certification is the "Hidden Trap" in ESS Export</h4>
-          <p>Many manufacturers claim full certification, but is the BMS actually included in the scope? Learn how to audit your supplier's UL/CE reports before the customs seizure.</p>
-          <a href="#" class="read-more">Read Full Analysis →</a>
+        <div class="blog-image">
+          
+        </div>
+        <div class="blog-body">
+          <span class="blog-meta">Quality Audit</span>
+          <h4>Why 90% of Battery Failures Start in the "BMS Firmware"</h4>
+          <p>Drawing from our team's history at Apple-tier suppliers, we analyze why hardware inspection isn't enough. Learn how to verify BMS logic to prevent long-term thermal risks.</p>
+          <a href="#" class="read-more-btn">Read Analysis</a>
         </div>
       </article>
 
       <article class="blog-card">
-        <div class="blog-content">
-          <span class="blog-category">Tariff Strategy</span>
-          <h4>Navigating 301 Tariffs: The Legal Path of Transshipment</h4>
-          <p>A breakdown of the "Substantial Transformation" principle. How we utilize Southeast Asian hubs to optimize landed costs for US importers while remaining 100% compliant.</p>
-          <a href="#" class="read-more">Read Full Analysis →</a>
+        <div class="blog-image">
+          
+        </div>
+        <div class="blog-body">
+          <span class="blog-meta">Trade Strategy</span>
+          <h4>The Legal Mechanics of Transshipment: Navigating 301 Tariffs</h4>
+          <p>A strategic guide on the "Substantial Transformation" rule. How to compliantly utilize Southeast Asian manufacturing hubs to optimize landed costs for the US market.</p>
+          <a href="#" class="read-more-btn">Read Analysis</a>
         </div>
       </article>
 
       <article class="blog-card">
-        <div class="blog-content">
-          <span class="blog-category">Quality Control</span>
-          <h4>The Apple-Supplier Rigor: Quality Beyond Final Inspection</h4>
-          <p>Applying semiconductor-grade lifecycle management to E-mobility controllers. Why 20 years of manufacturing experience matters in the first 100 days of product launch.</p>
-          <a href="#" class="read-more">Read Full Analysis →</a>
+        <div class="blog-image">
+          
+        </div>
+        <div class="blog-body">
+          <span class="blog-meta">Sourcing Intelligence</span>
+          <h4>Lessons from an IPO: Building Scalable Supplier Audits</h4>
+          <p>Our ex-Ninebot procurement lead shares the internal checklist used to transition from a startup to a global mobility leader. Focus on process discipline over sample testing.</p>
+          <a href="#" class="read-more-btn">Read Analysis</a>
         </div>
       </article>
+
+    </div>
+
+    <div class="sidebar-cta">
+      <h4>Don't Source Blindly.</h4>
+      <p style="margin-bottom: 20px;">Subscribe to receive our monthly "Supply Chain Risk Report" - A technical summary of new regulations and manufacturing pitfalls.</p>
+      <a href="contact.html" class="btn-primary">Subscribe to Intelligence</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 WW Export | All Rights Reserved.</p>
+  <p>© 2026 WWELEC.COM | Precision Engineering & Strategic Sourcing.</p>
 </footer>
 
 </body>
