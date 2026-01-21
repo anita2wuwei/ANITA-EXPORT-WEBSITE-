@@ -1,5 +1,5 @@
 /* ==========================================================================
-   WW EXPORT - PROFESSIONAL STYLESHEET (Hermès Orange & Anthracite Grey)
+   WW EXPORT - PROFESSIONAL STYLESHEET (Refined Hermès Orange & Anthracite Grey)
    ========================================================================== */
 
 /* 1. RESET & BASE */
@@ -16,13 +16,14 @@
   --text-dark: #1F2123;        /* 深炭色文字 */
   --text-white: #FFFFFF;
   --text-muted: #6C757D;       /* 低饱和辅助文字 */
+  --pure-white: #FFFFFF;
 }
 
 body {
   font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-dark);
   line-height: 1.6;
-  background-color: var(--white);
+  background-color: var(--pure-white);
 }
 
 .section-container {
@@ -71,7 +72,7 @@ nav a:hover {
 
 /* 3. HERO SECTION */
 .hero {
- .hero {
+  /* 使用渐变色增加质感，避免纯色块的沉闷 */
   background: linear-gradient(135deg, #2B2D30 0%, #242629 100%);
   color: var(--text-white);
   padding: 100px 5%;
@@ -121,6 +122,7 @@ nav a:hover {
   font-weight: bold;
   display: inline-block;
   transition: 0.3s;
+  border: none;
 }
 
 .btn-primary:hover {
@@ -148,7 +150,7 @@ nav a:hover {
 /* 5. SERVICES GRID */
 .services {
   padding: 80px 0;
-  background: var(--white);
+  background: var(--pure-white);
 }
 
 .services h3 {
@@ -206,7 +208,7 @@ nav a:hover {
 }
 
 .team-card {
-  background: var(--white);
+  background: var(--pure-white);
   padding: 30px;
   border-top: 4px solid var(--hermes-orange);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
@@ -230,7 +232,7 @@ nav a:hover {
 /* 7. WHY US / PROTOCOL */
 .why-us {
   padding: 80px 0;
-  background: var(--white);
+  background: var(--pure-white);
 }
 
 .why-us h3 {
@@ -299,8 +301,4 @@ footer {
 }
 
 /* 10. MOBILE RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 2.2rem; }
-  .btn-secondary { margin-left: 0; margin-top: 15px; display: block; }
-  .hero-tags span { display: block; }
-}
+@media (max-width:
