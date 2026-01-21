@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | WW Export - Request an Expert Diagnosis</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-container { padding: 80px 0; background: var(--light-grey); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; }
+    .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; }
+    .contact-method { margin-bottom: 30px; }
+    .contact-method h5 { color: var(--hermes-orange); text-transform: uppercase; margin-bottom: 5px; }
+    
+    .contact-form { background: white; padding: 40px; border-radius: 4px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 14px; }
+    .form-group input, .form-group select, .form-group textarea { 
+      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;
+    }
+    .form-group input:focus { border-color: var(--hermes-orange); outline: none; }
+    
+    .diagnosis-note { background: #fff5ef; border-left: 4px solid var(--hermes-orange); padding: 15px; margin-bottom: 20px; font-size: 14px; }
+  </style>
+</head>
 <body>
-<h1>Contact Us</h1>
-<p>Phone: +000‑0000‑0000</p>
-<p>Email: info@example.com</p>
-<p>Address: Your office address</p>
-<a href="mailto:info@example.com">Send Email</a>
+
+<header>
+  <div class="logo">WW <span>EXPORT</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-container">
+  <div class="section-container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Let’s Talk Engineering & Strategy</h2>
+        <p>Whether you need to secure a high-quality product line or optimize your global trade routes, our veterans are ready to assist.</p>
+        
+        <div class="contact-method" style="margin-top: 40px;">
+          <h5>Service Standards</h5>
+          <p><strong>24h</strong> Response Guarantee<br><strong>48h</strong> Technical Solution<br><strong>5-Day</strong> Resolution Protocol</p>
+        </div>
+
+        <div class="contact-method">
+          <h5>Direct Contact</h5>
+          <p>Email: business@wwexport.com<br>WhatsApp: +86-XXXX-XXXX-XXXX</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <div class="diagnosis-note">
+          <strong>Expert Diagnosis:</strong> Briefly describe your current supply chain challenge, and our specialists (ex-Ninebot/Sunwoda) will provide a preliminary assessment within 24 hours.
+        </div>
+        <form action="#">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label>Company Email</label>
+            <input type="email" placeholder="email@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Primary Interest</label>
+            <select>
+              <option>Energy Storage Systems (ESS)</option>
+              <option>Smart E-Mobility</option>
+              <option>Transshipment / Tariff Strategy</option>
+              <option>Quality Audit Service</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Challenge / Requirements</label>
+            <textarea rows="5" placeholder="E.g., We are facing high tariffs in the US market, or We need a more reliable battery supplier..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; border: none; cursor: pointer;">Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 WW Export | All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
