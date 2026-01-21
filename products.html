@@ -1,81 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products | WWELEC - Engineering Standards</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* 页面专用布局补充 */
-    .product-box { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 60px; align-items: center; }
-    .product-img { background: var(--light-bg); height: 350px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 4px; border: 1px dashed #ddd; }
-    .spec-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-    .spec-table td { padding: 12px 10px; border-bottom: 1px solid #eee; font-size: 14px; }
-    .spec-label { font-weight: bold; color: var(--anthracite-grey); width: 45%; text-transform: uppercase; font-size: 12px; }
-    @media (max-width: 768px) { .product-box { grid-template-columns: 1fr; } }
-  </style>
+    <meta charset="UTF-8">
+    <title>Products | WW Export</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <div class="container">
-    <a href="index.html" class="logo">WW <span>ELEC</span></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="blog.html">Blog</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<section class="sub-hero">
-  <div class="container">
-    <h1>[OUR PRODUCT PORTFOLIO]</h1>
-    <p>[Manufacturing excellence across Energy, Mobility, and Home Technology.]</p>
-  </div>
-</section>
-
-<section class="section container">
-  <div class="product-box">
-    <div class="product-img">
-      <img src="[assets/images/product-1.jpg]" alt="Product Image" style="max-width:80%; display:block; margin-bottom:10px;">
-      <p style="color: var(--hermes-orange); font-size: 12px;">[REPLACE WITH PRODUCT IMAGE PATH]</p>
-    </div>
-    <div class="product-info">
-      <h2 style="color: var(--anthracite-grey); margin-bottom:15px;">[ENERGY STORAGE SYSTEMS]</h2>
-      <p style="color: var(--text-muted);">[Automotive-grade reliability for residential and industrial backup battery solutions.]</p>
-      
-      <table class="spec-table">
-        <tr><td class="spec-label">[CELL TECHNOLOGY]</td><td>[LiFePO4 Tier-1 Cells]</td></tr>
-        <tr><td class="spec-label">[CYCLE LIFE]</td><td>[>6000 @ 80% DOD]</td></tr>
-        <tr><td class="spec-label">[CERTIFICATION]</td><td>[CE / UN38.3 / MSDS]</td></tr>
-      </table>
-      
-      <a href="contact.html" class="btn btn-orange" style="margin-top: 25px;">[GET TECHNICAL SPECS]</a>
-    </div>
-  </div>
-
-  <div class="product-box" style="direction: rtl;">
-    <div class="product-img" style="direction: ltr;">
-      <img src="[assets/images/product-2.jpg]" alt="Product Image" style="max-width:80%; display:block; margin-bottom:10px;">
-      <p style="color: var(--hermes-orange); font-size: 12px;">[REPLACE WITH PRODUCT IMAGE PATH]</p>
-    </div>
-    <div class="product-info" style="direction: ltr;">
-      <h2 style="color: var(--anthracite-grey); margin-bottom:15px;">[SMART E-MOBILITY]</h2>
-      <p style="color: var(--text-muted);">[High-performance urban mobility with integrated IoT and safety protocols.]</p>
-      
-      <table class="spec-table">
-        <tr><td class="spec-label">[FRAME MATERIAL]</td><td>[Aerospace Aluminum Alloy]</td></tr>
-        <tr><td class="spec-label">[MOTOR POWER]</td><td>[350W - 1000W Options]</td></tr>
-        <tr><td class="spec-label">[SMART FEATURES]</td><td>[App Integration / GPS]</td></tr>
-      </table>
-      
-      <a href="contact.html" class="btn btn-orange" style="margin-top: 25px;">[DOWNLOAD CATALOG]</a>
-    </div>
-  </div>
-</section>
-
-<footer><p>© 2026 WWELEC | Professional Sourcing & Quality Intelligence</p></footer>
+    <section class="section container">
+        <h2 style="margin-bottom: 40px;">Professional Portfolio</h2>
+        <div style="background: var(--white); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+            <div style="background: var(--light-bg); height: 300px;">[Product Image]</div>
+            <div>
+                <h3 style="color: var(--brand-orange)">Energy Storage Systems</h3>
+                <p style="margin: 20px 0; color: var(--secondary-grey);">Automotive-grade BMS for high-safety residential power.</p>
+                <ul style="list-style: none; border-top: 1px solid var(--light-bg); padding-top: 20px;">
+                    <li style="margin-bottom:10px;"><strong>Standard:</strong> UN38.3 / CE Compliant</li>
+                    <li><strong>Lifecycle:</strong> >6000 Cycles @ 80% DOD</li>
+                </ul>
+                <a href="contact.html" class="btn btn-orange" style="margin-top:30px;">Request Specs</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
