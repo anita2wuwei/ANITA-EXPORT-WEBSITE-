@@ -1,5 +1,5 @@
 /* =====================================================
-   BRAND COLORS (全站统一)
+   BRAND COLORS
    ===================================================== */
 :root {
   --primary-blue: #0056B3;
@@ -22,4 +22,268 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-               "Helve
+               "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-cyan);
+}
+
+/* =====================================================
+   HEADER / NAVIGATION
+   ===================================================== */
+header,
+nav {
+  background-color: var(--primary-blue);
+  border-bottom: 3px solid var(--accent-cyan);
+}
+
+nav a {
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-left: 24px;
+}
+
+nav a:hover {
+  color: var(--accent-cyan);
+}
+
+/* =====================================================
+   HERO SECTION
+   ===================================================== */
+.hero {
+  background-color: var(--bg-light);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--primary-blue);
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto 32px;
+  font-size: 18px;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-cyan);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-blue);
+  border: 1px solid var(--primary-blue);
+  padding: 10px 26px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+section {
+  padding: 60px 40px;
+}
+
+.section-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  color: var(--primary-blue);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+/* =====================================================
+   PRODUCT GRID
+   ===================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  transition: all .3s ease;
+}
+
+.product-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-4px);
+}
+
+.product-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* =====================================================
+   TECH HIGHLIGHT
+   ===================================================== */
+.tech-highlight {
+  background-color: var(--primary-blue);
+  color: #FFFFFF;
+  padding: 60px 40px;
+}
+
+.tech-highlight h2 {
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.tech-highlight span {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* =====================================================
+   CONTACT PAGE OVERRIDE
+   ===================================================== */
+.contact-page,
+.contact-section {
+  background-color: var(--bg-light) !important;
+  padding: 80px 20px;
+}
+
+.contact-container,
+form.contact-form {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: var(--bg-white);
+  padding: 48px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-container h1,
+.contact-container h2,
+.contact-container h3 {
+  color: var(--primary-blue);
+}
+
+.contact-container p,
+.contact-container label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-white);
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--accent-cyan) !important;
+}
+
+.contact-form button,
+.contact-form input[type="submit"] {
+  background-color: var(--primary-blue) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 12px 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form input[type="submit"]:hover {
+  background-color: var(--accent-cyan) !important;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+  background-color: #0F172A;
+  color: #CBD5E1;
+  padding: 40px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #CBD5E1;
+}
+
+footer a:hover {
+  color: var(--accent-cyan);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .contact-container,
+  form.contact-form {
+    margin: 40px 16px;
+    padding: 32px 24px;
+  }
+}
