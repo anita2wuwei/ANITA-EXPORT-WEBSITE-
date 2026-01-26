@@ -3,7 +3,7 @@
    ===================================================== */
 :root {
   --primary-silver: #C0C0C0;
-  --accent-blue: #00B4D8;
+  --accent-gold: #FFD700;
   --bg-white: #FFFFFF;
   --bg-light: #F5F5F5;
   --text-primary: #1E293B;
@@ -34,7 +34,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
 }
 
 /* =====================================================
@@ -53,7 +53,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
 }
 
 /* =====================================================
@@ -75,5 +75,215 @@ nav a:hover {
 .hero p {
   color: var(--text-secondary);
   max-width: 800px;
-  margin: 0 a
+  margin: 0 auto 32px;
+  font-size: 18px;
+}
 
+.btn-primary {
+  background-color: var(--primary-silver);
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-gold);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-silver);
+  border: 1px solid var(--primary-silver);
+  padding: 10px 26px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-silver);
+  color: #FFFFFF;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+section {
+  padding: 60px 40px;
+}
+
+.section-light {
+  background-color: var(--bg-light);
+}
+
+.section-title {
+  color: var(--primary-silver);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+/* =====================================================
+   PRODUCT GRID
+   ===================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  transition: all .3s ease;
+}
+
+.product-card:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-4px);
+}
+
+.product-card h3 {
+  color: var(--primary-silver);
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+/* =====================================================
+   TECH HIGHLIGHT
+   ===================================================== */
+.tech-highlight {
+  background-color: var(--primary-silver);
+  color: #FFFFFF;
+  padding: 60px 40px;
+}
+
+.tech-highlight h2 {
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.tech-highlight span {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* =====================================================
+   CONTACT PAGE OVERRIDE
+   ===================================================== */
+.contact-page,
+.contact-section {
+  background-color: var(--bg-light) !important;
+  padding: 80px 20px;
+}
+
+.contact-container,
+form.contact-form {
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: var(--bg-white);
+  padding: 48px;
+  border: 1px solid var(--border-color);
+}
+
+.contact-container h1,
+contact-container h2,
+.contact-container h3 {
+  color: var(--primary-silver);
+}
+
+.contact-container p,
+.contact-container label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.contact-form input,
+contact-form textarea,
+contact-form select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color) !important;
+  background-color: var(--bg-white);
+  font-size: 15px;
+}
+
+.contact-form input:focus,
+contact-form textarea:focus,
+contact-form select:focus {
+  outline: none;
+  border-color: var(--accent-gold) !important;
+}
+
+.contact-form button,
+contact-form input[type="submit"] {
+  background-color: var(--primary-silver) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  padding: 12px 32px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover,
+contact-form input[type="submit"]:hover {
+  background-color: var(--accent-gold) !important;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+  background-color: #2C2C2C;
+  color: #CBD5E1;
+  padding: 40px;
+  font-size: 14px;
+}
+
+footer a {
+  color: #CBD5E1;
+}
+
+footer a:hover {
+  color: var(--accent-gold);
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .contact-container,
+  form.contact-form {
+    margin: 40px 16px;
+    padding: 32px 24px;
+  }
+}
