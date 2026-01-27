@@ -1,291 +1,186 @@
-/* =====================================================
-   BRAND COLORS
-   ===================================================== */
-:root {
-  --primary-blue: #0D2B56;
-  --secondary-blue: #4A6FA5;
-  --section-bg: #E9EFF9;
-  --bg-white: #FFFFFF;
-  --accent-gold: #FFD700;
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
-  --border-color: #CBD5E1;
-}
-
-/* =====================================================
-   BASE RESET
-   ===================================================== */
-* {
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
+/* ================= 全局 ================= */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-               "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
-  background-color: var(--bg-white) !important;
-  color: var(--text-primary) !important;
-  line-height: 1.6 !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #F8FAFC;
+  color: #1E293B;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  color: var(--primary-blue) !important;
-  text-decoration: none !important;
+  text-decoration: none;
+  color: #0C1D70;
 }
 
 a:hover {
-  color: var(--accent-gold) !important;
+  color: #FFD166;
 }
 
-/* =====================================================
-   HEADER / NAVIGATION
-   ===================================================== */
-header, nav, .navbar, .site-header {
-  background-color: var(--primary-blue) !important;
-  border-bottom: 1px solid var(--secondary-blue) !important;
+/* ================= Header / Navbar ================= */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #0C1D70;
+  padding: 1rem 0;
 }
 
-header a, nav a, .navbar a, .site-header a {
-  color: #FFFFFF !important;
-  font-weight: 600 !important;
+.navbar a {
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
-header a:hover, nav a:hover, .navbar a:hover, .site-header a:hover {
-  color: var(--accent-gold) !important;
+.navbar a:hover {
+  color: #FFD166;
 }
 
-/* =====================================================
-   HERO SECTION
-   ===================================================== */
-.hero, .hero-section {
-  background-color: var(--section-bg) !important;
-  padding: 80px 40px !important;
-  text-align: center !important;
+/* ================= Hero ================= */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #F8FAFC;
 }
 
-.hero h1, .hero-section h1 {
-  color: var(--primary-blue) !important;
-  font-size: 42px !important;
-  font-weight: 700 !important;
-  margin-bottom: 16px !important;
+.hero h1 {
+  font-size: 2.5rem;
+  color: #0C1D70;
+  margin-bottom: 1rem;
 }
 
-.hero p, .hero-section p {
-  color: var(--text-secondary) !important;
-  max-width: 800px !important;
-  margin: 0 auto 32px !important;
-  font-size: 18px !important;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-button, .btn, .btn-primary {
-  background-color: var(--primary-blue) !important;
-  color: #FFFFFF !important;
-  padding: 12px 28px !important;
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-  border: none !important;
-  cursor: pointer !important;
-  transition: all .25s ease !important;
+.hero .btn {
+  display: inline-block;
+  background-color: #0C1D70;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: 0.3s;
 }
 
-button:hover, .btn:hover, .btn-primary:hover {
-  background-color: var(--accent-gold) !important;
+.hero .btn:hover {
+  background-color: #FFD166;
+  color: #0C1D70;
 }
 
-/* Outline buttons */
-.btn-outline, .btn-outline:hover {
-  background: transparent !important;
-  color: var(--primary-blue) !important;
-  border: 1px solid var(--primary-blue) !important;
-}
-.btn-outline:hover {
-  background-color: var(--primary-blue) !important;
-  color: #FFFFFF !important;
+/* ================= Sections ================= */
+.section {
+  padding: 3rem 1rem;
 }
 
-/* =====================================================
-   SECTIONS
-   ===================================================== */
-section, .section, .content-section {
-  padding: 60px 40px !important;
-  background-color: var(--bg-white) !important;
+.section-light {
+  background-color: #F8FAFC;
 }
 
-.section-light, .section-alt {
-  background-color: var(--section-bg) !important;
+.section-title {
+  text-align: center;
+  color: #0C1D70;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.section-title, h2, h3 {
-  color: var(--primary-blue) !important;
-  font-size: 32px !important;
-  font-weight: 700 !important;
-  margin-bottom: 12px !important;
+.section-subtitle {
+  text-align: center;
+  color: #1E293B;
+  font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
-.section-subtitle, p.subtitle {
-  color: var(--text-secondary) !important;
-  max-width: 760px !important;
-  margin-bottom: 40px !important;
+/* ================= 卡片 / 产品网格 ================= */
+.product-grid, .contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
-/* =====================================================
-   PRODUCT GRID
-   ===================================================== */
-.product-grid, .products-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
-  gap: 24px !important;
+.card, .product-card, .contact-card {
+  background-color: #FFFFFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 1 1 250px;
+  text-align: center;
 }
 
-.product-card, .product-item, .card {
-  background-color: var(--bg-white) !important;
-  border: 1px solid var(--secondary-blue) !important;
-  padding: 24px !important;
-  transition: all .3s ease !important;
+.card h3, .product-card h3, .contact-card h3 {
+  color: #0C1D70;
+  margin-bottom: 0.5rem;
 }
 
-.product-card:hover, .product-item:hover, .card:hover {
-  border-color: var(--accent-gold) !important;
-  transform: translateY(-4px) !important;
+.card p, .product-card p, .contact-card p {
+  color: #1E293B;
 }
 
-.product-card h3, .product-item h3, .card h3 {
-  color: var(--primary-blue) !important;
-  margin-bottom: 8px !important;
+/* ================= 表单 ================= */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.product-card p, .product-item p, .card p {
-  color: var(--text-secondary) !important;
-  font-size: 15px !important;
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #1E293B;
+  font-weight: 500;
 }
 
-/* =====================================================
-   TECH HIGHLIGHT
-   ===================================================== */
-.tech-highlight, .tech-section {
-  background-color: var(--primary-blue) !important;
-  color: #FFFFFF !important;
-  padding: 60px 40px !important;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #B7C1F7;
+  border-radius: 8px;
 }
 
-.tech-highlight h2, .tech-section h2 {
-  color: #FFFFFF !important;
-  margin-bottom: 16px !important;
+.contact-form input[type="submit"],
+.contact-form .btn {
+  background-color: #0C1D70;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.tech-highlight span, .tech-section span {
-  color: var(--accent-gold) !important;
-  font-weight: 600 !important;
+.contact-form input[type="submit"]:hover,
+.contact-form .btn:hover {
+  background-color: #FFD166;
+  color: #0C1D70;
 }
 
-/* =====================================================
-   CONTACT PAGE OVERRIDE
-   ===================================================== */
-.contact, .contact-page, .contact-section, .contact-container, form {
-  background-color: var(--section-bg) !important;
-  padding: 80px 20px !important;
+/* ================= Footer ================= */
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #0C1D70;
+  color: #fff;
 }
 
-.contact-container, form.contact-form {
-  max-width: 720px !important;
-  margin: 0 auto !important;
-  background-color: var(--bg-white) !important;
-  padding: 48px !important;
-  border: 1px solid var(--secondary-blue) !important;
+.site-footer a {
+  color: #FFD166;
+  margin-left: 1rem;
 }
 
-.contact-container h1, .contact-container h2, .contact-container h3 {
-  color: var(--primary-blue) !important;
+.site-footer a:hover {
+  color: #FFFFFF;
 }
 
-.contact-container p, .contact-container label {
-  color: var(--text-primary) !important;
-  font-weight: 500 !important;
-}
-
-.contact-container input,
-.contact-container textarea,
-.contact-container select,
-form input,
-form textarea,
-form select {
-  width: 100% !important;
-  padding: 12px 14px !important;
-  margin-bottom: 20px !important;
-  border: 1px solid var(--secondary-blue) !important;
-  background-color: var(--bg-white) !important;
-  color: var(--text-primary) !important;
-  font-size: 15px !important;
-}
-
-.contact-container input:focus,
-.contact-container textarea:focus,
-.contact-container select:focus,
-form input:focus,
-form textarea:focus,
-form select:focus {
-  outline: none !important;
-  border-color: var(--accent-gold) !important;
-}
-
-.contact-container button,
-.contact-container input[type="submit"],
-form button,
-form input[type="submit"] {
-  background-color: var(--primary-blue) !important;
-  color: #FFFFFF !important;
-  border: none !important;
-  padding: 12px 32px !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-}
-
-.contact-container button:hover,
-.contact-container input[type="submit"]:hover,
-form button:hover,
-form input[type="submit"]:hover {
-  background-color: var(--accent-gold) !important;
-}
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
-footer, .site-footer {
-  background-color: var(--primary-blue) !important;
-  color: #CBD5E1 !important;
-  padding: 40px !important;
-  font-size: 14px !important;
-}
-
-footer a, .site-footer a {
-  color: #CBD5E1 !important;
-}
-
-footer a:hover, .site-footer a:hover {
-  color: var(--accent-gold) !important;
-}
-
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-@media (max-width: 768px) {
-  nav, .navbar {
-    flex-direction: column !important;
-    gap: 12px !important;
-  }
-
-  .hero h1, .hero-section h1 {
-    font-size: 32px !important;
-  }
-
-  section, .section, .content-section {
-    padding: 40px 20px !important;
-  }
-
-  .contact-container, form.contact-form {
-    margin: 40px 16px !important;
-    padding: 32px 24px !important;
+/* ================= 响应式 ================= */
+@media screen and (max-width: 768px) {
+  .product-grid, .contact-grid {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
-
