@@ -1,136 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Industry Insights | WWELEC - Manufacturing & Compliance Intelligence</title>
+  <title>行业资讯 - ANITA EXPORT</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* 博客页面专属样式 */
-    .blog-hero { background: var(--anthracite-grey); padding: 60px 0; text-align: center; color: white; border-bottom: 1px solid #444; }
-    .blog-container { padding: 80px 0; background: var(--white); }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
-    
-    .blog-card { 
-      background: var(--white); 
-      border: 1px solid #eee; 
-      display: flex; 
-      flex-direction: column; 
-      transition: all 0.3s ease;
-    }
-    .blog-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: var(--hermes-orange); }
-    
-    .blog-image { 
-      width: 100%; 
-      height: 220px; 
-      background: var(--bg-light); 
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ccc;
-      font-size: 14px;
-    }
-
-    .blog-body { padding: 30px; flex-grow: 1; }
-    .blog-meta { color: var(--hermes-orange); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block; }
-    .blog-body h4 { font-size: 1.5rem; margin-bottom: 15px; color: var(--anthracite-grey); line-height: 1.3; }
-    .blog-body p { color: #666; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
-    
-    .read-more-btn { 
-      color: var(--anthracite-grey); 
-      text-decoration: none; 
-      font-weight: 700; 
-      font-size: 14px; 
-      display: inline-flex; 
-      align-items: center; 
-      transition: 0.2s;
-    }
-    .read-more-btn:hover { color: var(--hermes-orange); }
-    .read-more-btn::after { content: '→'; margin-left: 8px; }
-
-    /* 侧边栏留资框 */
-    .sidebar-cta { 
-      background: var(--bg-light); 
-      padding: 30px; 
-      margin-top: 50px; 
-      border-left: 4px solid var(--hermes-orange);
-      text-align: center;
-    }
-  </style>
 </head>
 <body>
 
-<header>
-  <div class="logo">WW<span>ELEC</span></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- NAVBAR / HEADER -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html">首页</a>
+      <a href="products.html">产品</a>
+      <a href="blog.html">行业资讯</a>
+      <a href="contact.html">联系我们</a>
+    </nav>
+  </header>
 
-<section class="blog-hero">
-  <div class="section-container">
-    <h1 style="font-size: 2.5rem; margin-bottom: 15px;">Supply Chain Intelligence</h1>
-    <p style="color: #aaa; max-width: 700px; margin: 0 auto;">Objective analysis on battery safety, manufacturing audits, and global trade compliance for the Energy & Mobility sectors.</p>
-  </div>
-</section>
+  <!-- ================= PAGE HERO ================= -->
+  <section class="hero">
+    <h1>行业资讯</h1>
+    <p>分享无机非金属材料及制造技术趋势，案例分析与应用经验</p>
+  </section>
 
-<section class="blog-container">
-  <div class="section-container">
-    <div class="blog-grid">
-      
-      <article class="blog-card">
-        <div class="blog-image">
-          
-        </div>
-        <div class="blog-body">
-          <span class="blog-meta">Quality Audit</span>
-          <h4>Why 90% of Battery Failures Start in the "BMS Firmware"</h4>
-          <p>Drawing from our team's history at Apple-tier suppliers, we analyze why hardware inspection isn't enough. Learn how to verify BMS logic to prevent long-term thermal risks.</p>
-          <a href="#" class="read-more-btn">Read Analysis</a>
-        </div>
-      </article>
+  <!-- ================= BLOG LIST ================= -->
+  <section class="section">
+    <div class="product-grid">
 
-      <article class="blog-card">
-        <div class="blog-image">
-          
-        </div>
-        <div class="blog-body">
-          <span class="blog-meta">Trade Strategy</span>
-          <h4>The Legal Mechanics of Transshipment: Navigating 301 Tariffs</h4>
-          <p>A strategic guide on the "Substantial Transformation" rule. How to compliantly utilize Southeast Asian manufacturing hubs to optimize landed costs for the US market.</p>
-          <a href="#" class="read-more-btn">Read Analysis</a>
-        </div>
-      </article>
+      <div class="card">
+        <h3>涂层膜材最新技术趋势</h3>
+        <p>介绍工业涂层膜材的最新研发方向，提升耐磨、防护和轻量化性能。</p>
+        <a href="blog-post1.html" class="btn btn-outline">阅读更多</a>
+      </div>
 
-      <article class="blog-card">
-        <div class="blog-image">
-          
-        </div>
-        <div class="blog-body">
-          <span class="blog-meta">Sourcing Intelligence</span>
-          <h4>Lessons from an IPO: Building Scalable Supplier Audits</h4>
-          <p>Our ex-Ninebot procurement lead shares the internal checklist used to transition from a startup to a global mobility leader. Focus on process discipline over sample testing.</p>
-          <a href="#" class="read-more-btn">Read Analysis</a>
-        </div>
-      </article>
+      <div class="card">
+        <h3>防水透气膜应用案例</h3>
+        <p>分析防水透气膜在智能硬件和户外设备中的实际应用和优势。</p>
+        <a href="blog-post2.html" class="btn btn-outline">阅读更多</a>
+      </div>
+
+      <div class="card">
+        <h3>电池正极材料安全与性能优化</h3>
+        <p>分享电池正极材料在性能、安全性和寿命上的优化策略。</p>
+        <a href="blog-post3.html" class="btn btn-outline">阅读更多</a>
+      </div>
+
+      <div class="card">
+        <h3>材料定制服务案例分享</h3>
+        <p>讲述针对客户定制材料的成功案例及应用经验。</p>
+        <a href="blog-post4.html" class="btn btn-outline">阅读更多</a>
+      </div>
 
     </div>
+  </section>
 
-    <div class="sidebar-cta">
-      <h4>Don't Source Blindly.</h4>
-      <p style="margin-bottom: 20px;">Subscribe to receive our monthly "Supply Chain Risk Report" - A technical summary of new regulations and manufacturing pitfalls.</p>
-      <a href="contact.html" class="btn-primary">Subscribe to Intelligence</a>
-    </div>
-  </div>
-</section>
+  <!-- ================= CTA ================= -->
+  <section class="hero">
+    <h2>想了解更多行业资讯或材料解决方案？</h2>
+    <a href="contact.html" class="btn">联系我们</a>
+  </section>
 
-<footer>
-  <p>© 2026 WWELEC.COM | Precision Engineering & Strategic Sourcing.</p>
-</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 ANITA EXPORT. All Rights Reserved.</p>
+    <p><a href="privacy.html">隐私政策</a></p>
+  </footer>
 
 </body>
 </html>
