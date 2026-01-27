@@ -1,124 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | WWELEC - Professional Manufacturing Support</title>
+  <title>联系我们 - ANITA EXPORT</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* 针对联系页面的增强样式 */
-    .contact-wrapper { padding: 80px 0; background-color: var(--light-grey); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start; }
-    
-    .contact-info h2 { font-size: 2.5rem; color: var(--anthracite-grey); margin-bottom: 25px; }
-    .contact-info p { margin-bottom: 30px; color: #555; }
-
-    .service-protocol { 
-      background: white; 
-      padding: 30px; 
-      border-left: 4px solid var(--hermes-orange); 
-      margin-top: 40px;
-    }
-    .service-protocol h5 { color: var(--hermes-orange); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-    .protocol-item { margin-bottom: 10px; font-weight: 600; color: var(--anthracite-grey); }
-    .protocol-item span { color: var(--text-muted); font-weight: 400; font-size: 0.9rem; margin-left: 10px; }
-
-    /* 表单样式 */
-    .contact-form-container { background: white; padding: 50px; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-    .form-group { margin-bottom: 25px; }
-    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; font-size: 0.9rem; color: var(--anthracite-grey); }
-    .form-group input, .form-group select, .form-group textarea { 
-      width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 2px; font-family: inherit; font-size: 1rem;
-    }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { 
-      border-color: var(--hermes-orange); outline: none; 
-    }
-
-    .btn-submit { 
-      background: var(--hermes-orange); color: white; border: none; padding: 16px 40px; 
-      font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; text-transform: uppercase;
-    }
-    .btn-submit:hover { background: var(--anthracite-grey); }
-
-    @media (max-width: 992px) {
-      .contact-grid { grid-template-columns: 1fr; gap: 50px; }
-      .contact-form-container { padding: 30px; }
-    }
-  </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">WW<span>ELEC</span></div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="blog.html">Blog</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <!-- NAVBAR / HEADER -->
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html">首页</a>
+      <a href="products.html">产品</a>
+      <a href="blog.html">行业资讯</a>
+      <a href="contact.html">联系我们</a>
+    </nav>
+  </header>
 
-<section class="contact-wrapper">
-  <div class="section-container">
-    <div class="contact-grid">
-      
-      <div class="contact-info">
-        <h2>Connect with Our Experts</h2>
-        <p>Whether you are seeking stable manufacturing for Energy Storage Systems or navigating complex trade compliance for E-Mobility, our team provides objective, engineering-first solutions.</p>
-        
-        <div class="contact-method">
-          <p><strong>Business Inquiry:</strong><br>Email: business@wwelec.com</p>
-          <p><strong>Technical Support:</strong><br>Email: support@wwelec.com</p>
-        </div>
+  <!-- ================= PAGE HERO ================= -->
+  <section class="hero">
+    <h1>联系我们</h1>
+    <p>如有材料需求、定制咨询或技术问题，请通过以下方式联系我方</p>
+  </section>
 
-        <div class="service-protocol">
-          <h5>Standard Operation Protocol</h5>
-          <div class="protocol-item">24 Hours <span>Initial response to all inquiries</span></div>
-          <div class="protocol-item">48 Hours <span>Technical assessment & feasibility feedback</span></div>
-          <div class="protocol-item">5 Business Days <span>Full project resolution or service roadmap</span></div>
-        </div>
+  <!-- ================= CONTACT INFO ================= -->
+  <section class="section section-light">
+    <h2 class="section-title">联系方式</h2>
+    <div class="product-grid">
+      <div class="card">
+        <h3>邮箱</h3>
+        <p><a href="mailto:info@anitaexport.com">info@anitaexport.com</a></p>
       </div>
-
-      <div class="contact-form-container">
-        <form action="#">
-          <div class="form-group">
-            <label>FULL NAME</label>
-            <input type="text" name="name" placeholder="E.g. John Doe" required>
-          </div>
-          
-          <div class="form-group">
-            <label>COMPANY EMAIL</label>
-            <input type="email" name="email" placeholder="john@company.com" required>
-          </div>
-
-          <div class="form-group">
-            <label>INTERESTED PRODUCT / SERVICE</label>
-            <select name="subject">
-              <option value="ess">Energy Storage Systems (ESS)</option>
-              <option value="mobility">Smart E-Mobility Solutions</option>
-              <option value="cleaning">Cleaning Appliances</option>
-              <option value="trade">Trade Strategy & Tariff Mitigation</option>
-              <option value="audit">Supply Chain Quality Audit</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label>PRIMARY CHALLENGE OR SPECIFICATION</label>
-            <textarea name="message" rows="5" placeholder="Please provide brief technical requirements or current supply chain challenges..."></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">Submit Inquiry</button>
-        </form>
+      <div class="card">
+        <h3>电话</h3>
+        <p>+86 138 0000 0000</p>
       </div>
-
+      <div class="card">
+        <h3>地址</h3>
+        <p>中国上海市浦东新区示例路88号</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 WWELEC.COM | Precision Manufacturing & Strategic Sourcing.</p>
-</footer>
+  <!-- ================= CONTACT FORM ================= -->
+  <section class="section">
+    <h2 class="section-title">发送消息</h2>
+    <form class="contact-form" action="mailto:info@anitaexport.com" method="post" enctype="text/plain">
+      <label for="name">姓名</label>
+      <input type="text" id="name" name="name" placeholder="您的姓名" required>
+
+      <label for="email">邮箱</label>
+      <input type="email" id="email" name="email" placeholder="您的邮箱" required>
+
+      <label for="company">公司名称</label>
+      <input type="text" id="company" name="company" placeholder="公司名称">
+
+      <label for="message">留言内容</label>
+      <textarea id="message" name="message" rows="6" placeholder="请输入您的问题或需求" required></textarea>
+
+      <input type="submit" value="发送消息" class="btn">
+    </form>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="hero">
+    <h2>或通过邮件/电话直接联系我方</h2>
+    <a href="mailto:info@anitaexport.com" class="btn">发送邮件</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 ANITA EXPORT. All Rights Reserved.</p>
+    <p><a href="privacy.html">隐私政策</a></p>
+  </footer>
 
 </body>
 </html>
