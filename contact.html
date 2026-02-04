@@ -17,7 +17,7 @@
         <a href="services.html">服务能力</a>
         <a href="blog.html" class="active">行业资讯</a>
         <a href="contact.html">合作联系</a>
-         <a href="contact.html">关于我们</a>
+         <a href="about.html">关于我们</a>
       </div>
     </nav>
   </header>
@@ -40,33 +40,56 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2 class="section-title">发送消息</h2>
-    <form class="contact-form" action="#" method="post">
-      <label for="name">姓名/职位</label>
-      <input type="text" id="name" name="name" placeholder="您的姓名" required>
+<section class="section">
+  <h2 class="section-title">发送消息</h2>
+  <form class="contact-form" action="#" method="post">
+    <label for="name">姓名/职位</label>
+    <input type="text" id="name" name="name" placeholder="例如：张经理 / 采购工程师" required>
 
-      <label for="company">单位名称</label>
-      <input type="text" id="company" name="company" placeholder="所属企业或机构" required>
+    <label for="company">单位名称</label>
+    <input type="text" id="company" name="company" placeholder="所属企业或科研机构全称" required>
 
-      <label for="needs">咨询领域</label>
-      <select id="needs" name="needs" style="width:100%; padding:0.75rem; margin-bottom:1.5rem; border:1px solid #ccc; border-radius:4px;">
-        <option value="sodium">亚铬酸钠基正极材料</option>
-        <option value="flow">铁铬液流电池电解液</option>
-        <option value="membrane">工业功能性膜材</option>
-        <option value="service">技术咨询与选型支持</option>
-      </select>
+    <label for="needs">咨询领域</label>
+    <select id="needs" name="needs" style="width:100%; padding:0.75rem; margin-bottom:1.5rem; border:1px solid #ccc; border-radius:4px; background-color: #fff;">
+      <option value="sodium">亚铬酸钠基正极材料 (NaCrO₂)</option>
+      <option value="flow">铁铬液流电池电解液</option>
+      <option value="membrane">工业功能性膜材</option>
+      <option value="service">材料验证与中试放量支持</option>
+    </select>
 
-      <label for="message">留言内容</label>
-      <textarea id="message" name="message" rows="6" placeholder="请简述您的应用场景或技术指标需求（如：工作温度、成本目标等）" required></textarea>
+    <label for="message">具体需求详情</label>
+    <div style="margin-bottom: 0.5rem; font-size: 0.8rem; color: #F37021;">
+      建议包含：工作温度要求、成本目标、循环寿命需求或特定工况
+    </div>
+    <textarea id="message" name="message" rows="8" 
+      placeholder="为了提供更精准的技术方案，请简述您的应用需求。
+例如：
+1. 应用场景：家用储能 / 低速电动车
+2. 技术指标：工作温度范围（如 -20℃ 至 70℃）
+3. 需求阶段：样册索取 / 小试验证 / 量产导入" 
+      required style="line-height: 1.6;"></textarea>
 
-      <div style="margin-bottom: 1.5rem; font-size: 0.85rem; color: #666;">
-        点击提交即表示您同意我们的 <a href="privacy.html" style="color: #F37021;">隐私政策</a>。
-      </div>
+    <div class="quick-tags" style="margin-bottom: 1.5rem; display: flex; gap: 10px; flex-wrap: wrap;">
+      <span style="font-size: 0.8rem; color: #666;">快捷输入：</span>
+      <button type="button" onclick="addTag('需要样册资料')" style="font-size: 0.75rem; padding: 2px 8px; border: 1px solid #ddd; background: #f9f9f9; cursor: pointer; border-radius: 4px;">索取样册</button>
+      <button type="button" onclick="addTag('咨询成本优势及报价')" style="font-size: 0.75rem; padding: 2px 8px; border: 1px solid #ddd; background: #f9f9f9; cursor: pointer; border-radius: 4px;">咨询成本</button>
+      <button type="button" onclick="addTag('了解材料在极寒/高温下的性能表现')" style="font-size: 0.75rem; padding: 2px 8px; border: 1px solid #ddd; background: #f9f9f9; cursor: pointer; border-radius: 4px;">环境耐受性</button>
+    </div>
 
-      <input type="submit" value="提交合作需求" class="btn">
-    </form>
-  </section>
+    <div style="margin-bottom: 1.5rem; font-size: 0.85rem; color: #666;">
+      点击提交即表示您同意我们的 <a href="privacy.html" style="color: #F37021;">隐私政策</a>。
+    </div>
+
+    <input type="submit" value="提交合作需求" class="btn">
+  </form>
+</section>
+
+<script>
+  function addTag(text) {
+    const textarea = document.getElementById('message');
+    textarea.value += (textarea.value ? '\n' : '') + text;
+  }
+</script>
 
   <footer class="site-footer" style="background-color: #2F343A; color: #F4F4F4; padding: 2rem 1rem; text-align: center;">
     <p>© 2026 深圳市无为智能硬件技术有限公司</p>
