@@ -1,186 +1,145 @@
-/* ================= 全局 ================= */
+/* ================= 全局重构：聚焦制造业严谨感 ================= */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   background-color: #F8FAFC;
   color: #1E293B;
-  line-height: 1.6;
+  line-height: 1.8; /* 增强可读性 */
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
   text-decoration: none;
   color: #0C1D70;
+  transition: all 0.3s ease;
 }
 
-a:hover {
-  color: #FFD166;
-}
-
-/* ================= Header / Navbar ================= */
+/* ================= Header / 响应式导航 ================= */
 .navbar {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between; /* 改为两端对齐，适配企业Logo布局 */
+  align-items: center;
+  gap: 1.5rem;
   background-color: #0C1D70;
-  padding: 1rem 0;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
 }
 
 .navbar a {
   color: #fff;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .navbar a:hover {
   color: #FFD166;
 }
 
-/* ================= Hero ================= */
+/* ================= Hero：品牌定位展示 ================= */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
-  background-color: #F8FAFC;
+  padding: 6rem 1.5rem;
+  background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #0C1D70;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  color: #475569;
 }
 
-.hero .btn {
-  display: inline-block;
-  background-color: #0C1D70;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  transition: 0.3s;
+/* ================= 产品与技术网格：参数敏感型设计 ================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 自动适配屏幕宽度 */
+  gap: 2rem;
+  padding: 2rem 5%;
 }
 
-.hero .btn:hover {
-  background-color: #FFD166;
-  color: #0C1D70;
-}
-
-/* ================= Sections ================= */
-.section {
-  padding: 3rem 1rem;
-}
-
-.section-light {
-  background-color: #F8FAFC;
-}
-
-.section-title {
-  text-align: center;
-  color: #0C1D70;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #1E293B;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-}
-
-/* ================= 卡片 / 产品网格 ================= */
-.product-grid, .contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.card, .product-card, .contact-card {
+.product-card {
   background-color: #FFFFFF;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  flex: 1 1 250px;
-  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* 制造业文案适合左对齐阅读 */
 }
 
-.card h3, .product-card h3, .contact-card h3 {
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(12, 29, 112, 0.1);
+  border-color: #0C1D70;
+}
+
+.product-card h3 {
   color: #0C1D70;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #FFD166;
+  padding-left: 0.75rem;
 }
 
-.card p, .product-card p, .contact-card p {
-  color: #1E293B;
+/* 高亮技术参数，如“1/10成本”、“350℃” */
+.highlight-param {
+  color: #0C1D70;
+  font-weight: 700;
+  background: rgba(255, 209, 102, 0.2);
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
-/* ================= 表单 ================= */
+/* ================= 针对中国制造业客户的表单优化 ================= */
 .contact-form {
-  max-width: 600px;
-  margin: 2rem auto;
+  max-width: 700px;
+  margin: 3rem auto;
   background: #FFFFFF;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
 }
 
 .contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #1E293B;
-  font-weight: 500;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: #0F172A;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #B7C1F7;
-  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  background-color: #F8FAFC;
+  transition: border-color 0.2s;
 }
 
-.contact-form input[type="submit"],
-.contact-form .btn {
-  background-color: #0C1D70;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.contact-form input:focus {
+  border-color: #0C1D70;
+  outline: none;
 }
 
-.contact-form input[type="submit"]:hover,
-.contact-form .btn:hover {
-  background-color: #FFD166;
-  color: #0C1D70;
-}
-
-/* ================= Footer ================= */
-.site-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #0C1D70;
-  color: #fff;
-}
-
-.site-footer a {
-  color: #FFD166;
-  margin-left: 1rem;
-}
-
-.site-footer a:hover {
-  color: #FFFFFF;
-}
-
-/* ================= 响应式 ================= */
+/* ================= 响应式适配调整 ================= */
 @media screen and (max-width: 768px) {
-  .product-grid, .contact-grid {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  .hero h1 { font-size: 2rem; }
+  .navbar { padding: 1rem 5%; flex-direction: column; gap: 1rem; }
+  .navbar-links { gap: 1rem; font-size: 0.9rem; }
+  .product-grid { grid-template-columns: 1fr; padding: 1rem; }
+  .contact-form { padding: 1.5rem; margin: 1rem; }
 }
